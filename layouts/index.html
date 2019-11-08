@@ -1,2 +1,15 @@
 {{ define "main" }}
+<header>
+    <h1>{{ .Title }}</h1>
+</header>
+<section>
+    {{ .Content }}
+</section>
+<section class="recent">
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+    {{ range $paginator.Pages }}
+    {{ .Render "summary" }}
+    {{ end }}
+</section>
 {{ end }}
