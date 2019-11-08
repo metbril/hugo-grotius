@@ -5,6 +5,10 @@
         </h2>
     </header>
     {{ .Summary }}
+    {{ if .Truncated }}
+    <a href="{{ .Permalink }}">Read more...</a>
+    {{ end }}
+
     <footer>
         <div>
             <a href='{{ .Permalink }}'>
