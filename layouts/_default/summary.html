@@ -3,6 +3,9 @@
         <h2 class="p-name">
             <a href='{{ .Permalink }}'>{{ .Title }}</a>
         </h2>
+        <div class="h-card">
+           {{ i18n "By"}} <a class="p-name u-url" href="{{ "/" | absURL }}">{{ .Site.Params.Author }}</a>
+        </div>
     </header>
     {{ .Summary }}
     {{ if .Truncated }}
