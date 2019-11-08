@@ -2,14 +2,16 @@
 <html lang="{{ .Site.LanguageCode | default "en" }}">
     {{- partial "head.html" . -}}
     <body>
-        <header>
-        {{- partial "header.html" . -}}
-        </header>
-        <main>
-        {{- block "main" . }}{{- end }}
-        </main>
-        <footer>
-        {{- partial "footer.html" . -}}
-        </footer>
+        <div class="main">
+            <header>
+            {{- partial "header.html" . -}}
+            </header>
+            <main>
+            {{- block "main" . }}{{- end }}
+            </main>
+            <footer>
+            {{- partial "footer.html" . -}}
+            </footer>
+        </div>
     </body>
 </html>
