@@ -1,11 +1,9 @@
-<article class="h-entry">
+<article class="post h-entry">
     <header>
         <h2 class="p-name">
             <a href='{{ .Permalink }}'>{{ .Title }}</a>
         </h2>
-        <div class="h-card">
-           {{ i18n "By"}} <a class="p-name u-url" href="{{ "/" | absURL }}">{{ .Site.Params.Author }}</a>
-        </div>
+        {{ partial "post-author" . }}
     </header>
     {{ .Summary }}
     {{ if .Truncated }}
@@ -13,25 +11,21 @@
     {{ end }}
 
     <footer>
-        <div>
-            <a class="u-url" href='{{ .Permalink }}'>
-                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-                    {{ .PublishDate.Format "Mon 2 Jan 2006 at 15:04 MST" }}
-                </time>
-            </a>
-        </div>
-        <div>
+        <div class="post-meta">
+            <p>
+                <a class="u-url" href='{{ .Permalink }}'>
+                    <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+                        {{ .PublishDate.Format "Mon 2 Jan 2006 at 15:04 MST" }}
+                    </time>
+                </a>
+            </p>
             {{ if .Params.tags }}
-            <ul>
+            <p>
                 {{ range .Params.tags }}
-                <li>
-                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="">
-                        {{- . -}}
-                    </a>
-                </li>
+                #<a class="" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" >{{- . -}}</a>
                 {{ end }}
-            </ul>
-            {{ end }}
+            </p>
+        {{ end }}
         </div>
     </footer>
 </article>
