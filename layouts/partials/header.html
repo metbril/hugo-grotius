@@ -1,6 +1,6 @@
-<h1>{{ .Site.Title }}</h1>
+<h1 class="site-header"><a href={{ "/" | absURL }}>{{ .Site.Title }}</a></h1>
 <nav class="site-nav">
-    <ul>
+    <ul class="menu">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
         <li>
