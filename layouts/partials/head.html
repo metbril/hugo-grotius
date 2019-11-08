@@ -23,5 +23,10 @@
     {{- template "_internal/schema.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
     {{/* Stylesheet(s) */}}
+    {{ if .Site.Params.LocalStyles }}
+    <link rel="stylesheet" href={{ "/css/normalize.css" | absURL }} />
+    {{ else }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    {{ end}}
     <link rel="stylesheet" href="{{ "/css/style.css" | absURL }}">
 </head>
