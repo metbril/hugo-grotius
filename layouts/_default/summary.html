@@ -1,6 +1,6 @@
-<article>
+<article class="h-entry">
     <header>
-        <h2>
+        <h2 class="p-name">
             <a href='{{ .Permalink }}'>{{ .Title }}</a>
         </h2>
     </header>
@@ -11,8 +11,8 @@
 
     <footer>
         <div>
-            <a href='{{ .Permalink }}'>
-                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+            <a class="u-url" href='{{ .Permalink }}'>
+                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
                     {{ .PublishDate.Format "Mon 2 Jan 2006 at 15:04 MST" }}
                 </time>
             </a>
