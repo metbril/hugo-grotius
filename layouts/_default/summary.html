@@ -6,7 +6,7 @@
     </header>
     {{ .Summary }}
     {{ if .Truncated }}
-    <a href="{{ .Permalink }}">Read more...</a>
+    <a href="{{ .Permalink }}">{{ i18n "readmore" }}</a>
     {{ end }}
 
     <footer>
