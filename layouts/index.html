@@ -6,6 +6,7 @@
     {{ .Content }}
 </section>
 <section class="recent">
+    <h1>Recente berichten</h1>
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
     {{ range $paginator.Pages }}
