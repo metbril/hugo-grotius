@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="post h-entry" id="post-{{ .Permalink | md5 }}">
+    {{ partial "post-header" . }}
+    <div class="post-content">
+    {{ .Content }}
+    </div>
+    {{ partial "post-footer" . }}
+</article>
+{{ end }}

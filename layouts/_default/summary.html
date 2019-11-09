@@ -1,0 +1,8 @@
+<article class="post h-entry" id="post-{{ .Permalink | md5 }}">
+    {{ partial "post-header" . }}
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <a href="{{ .Permalink }}">{{ i18n "readmore" }}</a>
+    {{ end }}
+    {{ partial "post-footer" . }}
+</article>

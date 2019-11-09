@@ -1,0 +1,26 @@
+social:
+  - id: twitter
+    name: Twitter
+    url: https://twitter.com/gohugoio
+    icon: fa-twitter
+    style: fab
+
+  - id: github
+    name: GitHub
+    url: https://github.com/gohugoio
+    icon: fa-github
+    style: fab
+
+  - id: spacer1
+
+  - id: www
+    name: "WWW"
+    url: https://gohugo.io
+    icon: fa-globe
+    style: fas
+
+  - id: email
+    name: "E-mail"
+    url: mailto:info@gohugo.io
+    icon: fa-envelope
+    style: fas

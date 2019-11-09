@@ -1,0 +1,17 @@
+{{ define "main" }}
+<header>
+    <h1>{{ .Title }}</h1>
+</header>
+<section>
+    {{ .Content }}
+</section>
+<section class="recent">
+    <h1>Recente berichten</h1>
+    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+    {{ range $paginator.Pages }}
+    {{ .Render "summary" }}
+    {{ end }}
+</section>
+{{- template "_internal/pagination.html" . -}}
+{{ end }}

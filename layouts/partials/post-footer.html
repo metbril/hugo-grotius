@@ -1,0 +1,18 @@
+<footer>
+    <div class="post-meta">
+        <p>
+            <a class="u-url" href='{{ .Permalink }}'>
+                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+                    {{ .PublishDate.Format "Mon 2 Jan 2006 at 15:04 MST" }}
+                </time>
+            </a>
+        </p>
+        {{ if .Params.tags }}
+        <p>
+            {{ range .Params.tags }}
+            #<a class="" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" >{{- . -}}</a>
+            {{ end }}
+        </p>
+    {{ end }}
+    </div>
+</footer>
