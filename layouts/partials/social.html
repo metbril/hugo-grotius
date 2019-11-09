@@ -3,9 +3,11 @@
     <ul class="footer-links">
         {{ range $.Site.Data.social.social }}
             <li>
-                <a href="{{ .url }}">
-                    <i class="{{.style}} {{.icon}}"></i>
+                {{ if .url }}
+                <a title="{{ .name }}" href="{{ .url }}">
+                    <i class="{{ .style }} {{ .icon }}"></i>
                 </a>
+                {{ end }}
             </li>
         {{ end }}
     </ul>                
