@@ -14,7 +14,10 @@ div#main {
     max-width: 940px;
     margin: 0 auto;
 }
-
+footer#main {
+    margin: 20px 0;
+    font-size: 80%;
+}
 /* Post styling */
 .post {
     margin: 40px 0;
