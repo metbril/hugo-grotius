@@ -1,0 +1,12 @@
+{{/* Parse file /data/social.yaml */}}
+<nav id="social">
+    <ul class="footer-links">
+        {{ range $.Site.Data.social.social }}
+            <li>
+                <a href="{{ .url }}">
+                    <i class="{{.style}} {{.icon}}"></i>
+                </a>
+            </li>
+        {{ end }}
+    </ul>                
+</nav>
