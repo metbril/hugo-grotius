@@ -39,16 +39,15 @@ footer#main {
     margin: 0;
     padding: 0;
 }
-.post h1,
-.post h2 {
+.post h1 {
     font-size: 2em;
 }
-.post h2 a,
+.post h1 a,
 .post-meta a {
     text-decoration: inherit;
     color: inherit;
 }
-.post h2 a:hover,
+.post h1 a:hover,
 .post-meta a:hover {
     text-decoration: underline;
 }
