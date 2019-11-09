@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 3em;
 }
-div.main {
+div#main {
     max-width: 940px;
     margin: 0 auto;
 }
