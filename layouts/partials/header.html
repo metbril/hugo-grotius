@@ -1,4 +1,5 @@
 <h1 class="site-header"><a href={{ "/" | absURL }}>{{ .Site.Title }}</a></h1>
+{{ with .Site.Params.Description }}<p>{{ . }}</p>{{ end }}
 <nav class="site-nav">
     <ul class="menu">
     {{ $currentPage := . }}
