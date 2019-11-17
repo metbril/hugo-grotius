@@ -1,0 +1,20 @@
+{{ with $.Site.Params.author }}
+<div class="h-card hcard">
+    <img class="avatar u-photo" src="{{ .photo }}">
+    <p class="p-name">
+        <a class="u-url u-uid" href="{{ .url }}">
+            {{ .name }}
+        </a>
+    </p>
+    <p class="p-note">{{ .note }}</p>
+    <p class="p-email">
+        <a href="mailto:{{ .email }}">
+            {{ .email }}
+        </a>
+    </p>
+    <p class="p-adr h-adr">
+      <span class="p-locality">{{ .locality }}</span>
+      <span class="p-country-name">{{ .countryname }}</span>
+    </p>
+</div>
+{{ end }}
