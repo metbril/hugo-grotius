@@ -122,3 +122,11 @@ footer ul.footer-links li {
     flex: auto;
     text-align: center;
 }
+img.avatar {
+    width: 128px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c0c0c0;
+    margin: 4px 0;
+}
