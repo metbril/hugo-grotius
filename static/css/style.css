@@ -130,3 +130,9 @@ img.avatar {
     border-color: #c0c0c0;
     margin: 4px 0;
 }
+h1.site-header {
+    margin-bottom: 0;
+}
+header#main p {
+    margin-top: 0;
+}
