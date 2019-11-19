@@ -10,7 +10,7 @@
         {{ if .Params.tags }}
         <p>
             {{ range .Params.tags }}
-            #<a class="" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" >{{- . -}}</a>
+            #<a class="p-category" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" >{{- . -}}</a>
             {{ end }}
         </p>
     {{ end }}
