@@ -7,6 +7,22 @@ copyright = "GPL-3.0-or-later"
 theme = "grotius"
 themesDir = "../.."
 
+paginate = 3
+pluralizeListTitles = true
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+
+[params]
+  description = "An example site, demonstrating the Hugo Grotius theme."
+  recent_posts_number = 5
+  mainSections = ["article", "note"]     # sections on homepage
+  favicon = ""
+  images = ["/images/hugo.jpg"]
+
+  # Grotius theme
+  localStyles = true
+
 # grotius: h-card properties
 [params.author]
   name = "Hugo Grotius"
