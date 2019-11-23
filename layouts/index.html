@@ -5,7 +5,7 @@
 <section>
     {{ .Content }}
 </section>
-<section class="recent">
+<section class="recent h-feed">
     <h1>{{ i18n "recentposts" }}</h1>
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
