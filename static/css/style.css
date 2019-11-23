@@ -58,6 +58,7 @@ address {
 
 /* menu */
 ul.menu {
+    font-family: 'Oswald', sans-serif;
     list-style-type: none;
     margin: 0;
     padding: 0;
