@@ -2,13 +2,13 @@
 <nav id="social">
     <ul class="footer-links">
         {{ range $.Site.Data.social.social }}
-            <li>
-                {{ if .url }}
-                <a title="{{ .name }}" href="{{ .url }}">
-                    <i class="{{ .style }} {{ .icon }}"></i>
-                </a>
-                {{ end }}
-            </li>
+        <li>
+            {{ if .url }}
+            <a title="{{ .name }}" href="{{ .url }}">
+                <i class="{{ .style }} {{ .icon }}"></i>
+            </a>
+            {{ end }}
+        </li>
         {{ end }}
     </ul>                
 </nav>

@@ -2,5 +2,13 @@
     <h1 class="p-name">
         <a href='{{ .Permalink }}'>{{ .Title }}</a>
     </h1>
-    {{ partial "post-author" . }}
+    <div class="post-meta">
+        {{ partial "post-author" . }}
+        <a class="url u-url" href="{{ .Permalink }}" title="{{ .Title }}" rel="bookmark">
+            <time class="post-date updated published dt-updated dt-published" datetime="{{ .Date }}" itemprop="dateModified datePublished">
+                {{ .Date }}
+            </time>
+        </a>
+    </div>
+
 </header>

@@ -1,4 +1,4 @@
 ---
-date: {{ .Date }}
 slug: {{ now.Unix }}
+date: "{{ .Date }}"
 ---

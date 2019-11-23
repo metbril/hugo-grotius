@@ -1,0 +1,41 @@
+# Example config file for the Grotius Theme
+
+baseURL = "https://www.example.com"
+title = "Hugo Grotius Theme Example"
+languageCode = "en-US"
+copyright = "GPL-3.0-or-later"
+theme = "grotius"
+themesDir = "../.."
+
+paginate = 3
+pluralizeListTitles = true
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+
+[params]
+  description = "An example site, demonstrating the Hugo Grotius theme."
+  recent_posts_number = 5
+  mainSections = ["article", "note"]     # sections on homepage
+  favicon = ""
+  images = ["/images/hugo.jpg"]
+
+  # Grotius theme
+  localStyles = true
+
+# grotius: h-card properties
+[params.author]
+  name = "Hugo Grotius"
+  url = "https://en.wikipedia.org/wiki/Hugo_Grotius"
+  photo = "/images/hugo.jpg"
+  email = "hugo.grotius@example.com"
+  locality = "Delft"
+  countryName = "Netherlands"
+  note = "Jurist. Writer."
+
+# grotius: IndieWeb Endpoints
+[params.indieweb]
+    AuthorizationEndpoint = "https://indieauth.com/auth"    # default 'https://indieauth.com/auth'
+    TokenEndpoint = "https://tokens.indieauth.com/token"    # default 'https://tokens.indieauth.com/token'
+    Micropub = ""
+    Microsub = ""

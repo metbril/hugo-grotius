@@ -2,10 +2,10 @@ html {
     line-height: 1.5;
 }    
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 h1 {
     font-size: 3em;
@@ -58,6 +58,7 @@ address {
 
 /* menu */
 ul.menu {
+    font-family: 'Oswald', sans-serif;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -121,4 +122,18 @@ footer ul.footer-links li {
     padding: 0;
     flex: auto;
     text-align: center;
+}
+img.avatar {
+    width: 128px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c0c0c0;
+    margin: 4px 0;
+}
+h1.site-header {
+    margin-bottom: 0;
+}
+header#main p {
+    margin-top: 0;
 }
