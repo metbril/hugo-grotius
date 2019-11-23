@@ -1,4 +1,4 @@
 ---
-title: {{ .Name }}
 date: {{ .Date }}
+slug: {{ now.Unix }}
 ---
