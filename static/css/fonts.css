@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: normal;
+    font-display: auto;
+    src: url(../fonts/Merriweather/Merriweather-Regular.ttf);
+}
+@font-face {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: bold;
+    src: url(../fonts/Merriweather/Merriweather-Bold.ttf);
+}
+@font-face {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: bold;
+    src: url(../fonts/Merriweather/Merriweather-BoldItalic.ttf);
+}
+@font-face {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Oswald/Oswald-Light.ttf);
+}
+@font-face {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: bold;
+    src: url(../fonts/Oswald/Oswald-Regular.ttf);
+}
