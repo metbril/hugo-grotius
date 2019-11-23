@@ -1,0 +1,18 @@
+# Example config file for the Grotius Theme
+
+baseURL = "https://www.example.com"
+title = "Hugo Grotius Theme Example"
+languageCode = "en-US"
+copyright = "GPL-3.0-or-later"
+theme = "grotius"
+themesDir = "../.."
+
+# grotius: h-card properties
+[params.author]
+  name = "Hugo Grotius"
+  url = "https://en.wikipedia.org/wiki/Hugo_Grotius"
+  photo = "/images/hugo.jpg"
+  email = "hugo.grotius@example.com"
+  locality = "Delft"
+  countryName = "Netherlands"
+  note = "Jurist. Writer."
