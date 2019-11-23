@@ -1,6 +1,36 @@
 # hugo-grotius
 Hugo Grotius Theme
 
+## IndieWeb Posts
+
+### Sections
+
+The theme expects [IndieWeb posts](https://indieweb.org/posts) as separate sections. The advantage is, that the post type is determined by the section the page is in. You don't need to explicitly set the type. Post discovery is not required. Another advantage is, that Hugo supports post type views out of the box. You can simply open a section/view and list all pages in it.
+
+So your site will have sections like 'note', 'article', 'like' etc. These sections become Hugo page types. Layout templates in the theme are based on those layouts.
+
+These post types are currently supported:
+
+- note
+- article
+- like
+- bookmark
+
+Any unsupported type will fallback to the default layouts.
+
+### Localization
+
+If you like to localize your post types, for example use 'bladwijzer' (Dutch) instead of 'bookmark', just create the section with that name, and add an `_index.md` file with some specific frontmatter.
+
+The frontmatter in the index file should force the type and cascade it to all child pages:
+
+`/content/bladwijzer/_index.md`
+```yaml
+type: bookmark
+cascade:
+  type: bookmark
+```
+
 ## Hugo Grotius???
 
 [Hugo Grotius](https://en.wikipedia.org/wiki/Hugo_Grotius) (Hugo de Groot) is a Dutch historical figure. 
