@@ -16,3 +16,10 @@ themesDir = "../.."
   locality = "Delft"
   countryName = "Netherlands"
   note = "Jurist. Writer."
+
+# grotius: IndieWeb Endpoints
+[params.indieweb]
+    AuthorizationEndpoint = "https://indieauth.com/auth"    # default 'https://indieauth.com/auth'
+    TokenEndpoint = "https://tokens.indieauth.com/token"    # default 'https://tokens.indieauth.com/token'
+    Micropub = ""
+    Microsub = ""
