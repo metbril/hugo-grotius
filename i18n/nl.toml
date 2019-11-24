@@ -6,3 +6,15 @@ other = "Lees verder..."
 
 [recentposts]
 other = "Recente berichten"
+
+# page types
+[article]
+other = "artikel"
+[bookmark]
+other = "bladwijzer"
+[like]
+other = "like"
+[page]
+other = "pagina"
+[note]
+other = "notitie"

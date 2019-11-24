@@ -51,6 +51,9 @@ footer#main {
 .post-meta a:hover {
     text-decoration: underline;
 }
+.post-type {
+    font-weight: bold;
+}
 /* Standard HTML tags */
 address {
     font-style: normal;

@@ -6,3 +6,15 @@ other = "Lees verder..."
 
 [recentposts]
 other = "Recent Posts"
+
+# page types
+[article]
+other = "article"
+[bookmark]
+other = "bookmark"
+[like]
+other = "like"
+[page]
+other = "page"
+[note]
+other = "note"
