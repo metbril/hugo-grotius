@@ -1,12 +1,2 @@
 <h1 class="site-header"><a href={{ "/" | absURL }}>{{ .Site.Title }}</a></h1>
 {{ with .Site.Params.Description }}<p>{{ . }}</p>{{ end }}
-<nav class="site-nav">
-    <ul class="menu">
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-        <li>
-            <a class="site-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-        </li>
-    {{ end }}
-    </ul>
-</nav>
