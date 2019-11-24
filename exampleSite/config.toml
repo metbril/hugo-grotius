@@ -37,5 +37,7 @@ SectionPagesMenu = "main"
 [params.indieweb]
     AuthorizationEndpoint = "https://indieauth.com/auth"    # default 'https://indieauth.com/auth'
     TokenEndpoint = "https://tokens.indieauth.com/token"    # default 'https://tokens.indieauth.com/token'
+    Webmention = ""
+    Pingback = ""
     Micropub = ""
     Microsub = ""

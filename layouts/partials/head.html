@@ -22,15 +22,7 @@
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/schema.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
-    {{/*  IndieWeb Endpoints  */}}
-    <link href="{{ .Site.Params.IndieWeb.AuthorizationEndpoint | default "https://indieauth.com/auth" }}" rel="authorization_endpoint">
-    <link href="{{ .Site.Params.IndieWeb.TokenEndpoint | default "https://tokens.indieauth.com/token" }}" rel="token_endpoint">
-    {{ with .Site.Params.IndieWeb.Micropub }}
-    <link href="{{ . }}" rel="micropub">
-    {{ end }}
-    {{ with .Site.Params.IndieWeb.Microsub }}
-    <link href="{{ . }}" rel="microsub">
-    {{ end }}
+    {{ partial "head-endpoints" . }}
     {{/* Stylesheet(s) */}}
     {{ if .Site.Params.LocalStyles }}
     <link rel="stylesheet" href={{ "/fontawesome/css/fontawesome.min.css" | relURL }} />
