@@ -1,0 +1,15 @@
+<div class="post-meta post-type">
+    <i class="fas fa-
+    {{- if eq .Type "note" -}}
+    pen
+    {{- else if eq .Type "article" -}}
+    newspaper
+    {{- else if eq .Type "bookmark" -}}
+    bookmark
+    {{- else if eq .Type "like" -}}
+    heart
+    {{- else -}}
+    file
+    {{- end -}}"></i>
+    {{  .Type | i18n | lower }}
+</div>

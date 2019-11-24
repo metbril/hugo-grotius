@@ -23,11 +23,8 @@ footer#main {
     margin: 40px 0;
 }
 .post-meta {
-    color: #c0c0c0;
+    color: #999999;
     font-size: 80%;
-    clear: both;
-    overflow: auto;
-    display: block;
 }
 .post-meta .avatar {
     width: 48px;
@@ -50,6 +47,15 @@ footer#main {
 .post h1 a:hover,
 .post-meta a:hover {
     text-decoration: underline;
+}
+.post-type {
+    font-weight: bold;
+}
+.photo-padding {
+    padding-left: 72px;
+}
+.author .photo {
+    margin-left: -72px;
 }
 /* Standard HTML tags */
 address {
@@ -136,4 +142,12 @@ h1.site-header {
 }
 header#main p {
     margin-top: 0;
+}
+.post-header {
+    margin-bottom: 20px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }

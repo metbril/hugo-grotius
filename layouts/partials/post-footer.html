@@ -1,8 +1,8 @@
 <footer>
     <div class="post-meta">
         <p>
-            <a class="u-url" href='{{ .Permalink }}'>
-                <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+            <a class="url u-url" href="{{ .Permalink }}" title="" rel="bookmark">
+                <time class="post-date updated published dt-updated dt-published" datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" itemprop="dateModified datePublished">
                     {{ .PublishDate.Format "Mon 2 Jan 2006 at 15:04 MST" }}
                 </time>
             </a>
