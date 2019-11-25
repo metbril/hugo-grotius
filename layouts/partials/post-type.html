@@ -1,15 +1,15 @@
+{{/* https://www.webfx.com/tools/emoji-cheat-sheet/ */}}
 <div class="post-meta post-type">
-    <i class="fas fa-
-    {{- if eq .Type "note" -}}
-    pen
+    {{ if eq .Type "note" -}}
+    {{ emojify ":notebook_with_decorative_cover:" }}
     {{- else if eq .Type "article" -}}
-    newspaper
+    {{ emojify ":newspaper:" }}
     {{- else if eq .Type "bookmark" -}}
-    bookmark
+    {{ emojify ":bookmark:" }}
     {{- else if eq .Type "like" -}}
-    heart
+    {{ emojify ":heart:" }}
     {{- else -}}
-    file
-    {{- end -}}"></i>
+    {{ emojify ":page_facing_up:" }}
+    {{- end }}
     {{  .Type | i18n | lower }}
 </div>
