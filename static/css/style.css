@@ -7,9 +7,6 @@ body {
     "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
 }
-h1 {
-    font-size: 3em;
-}
 div#main {
     max-width: 940px;
     margin: 0 auto;
@@ -63,7 +60,7 @@ address {
 }
 
 /* menu */
-ul.menu {
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -71,29 +68,37 @@ ul.menu {
     overflow: hidden;
     background-color: #333;
 }
-ul.menu li {
+.menu ul li {
+    font-weight: bold;
+    text-transform: uppercase;
     float: left;
 }
-ul.menu li a {
+.menu ul li.active {
+    background-color: aquamarine;
+}
+.menu ul li a {
     display: block;
     text-decoration: none;
-    padding: 0 4px;
-}
-ul.menu li a {
     text-align: center;
     color: white;
+    padding: 0 4px;
     padding: 14px 16px;
 }
-ul.menu li a:hover {
+.menu ul li a:hover {
     background-color: #111;
 }
-h1.site-header a {
-    text-decoration: inherit;
+/* Site header */
+.banner {
+    padding: 0 25px;
+}
+.banner h1 {
+    margin-bottom: 0;
+}
+.banner h1 a {
     color: inherit;
+    text-decoration: inherit;
 }
-h1.site-header a:hover {
-    text-decoration: underline;
-}
+/* post */
 .post header {
     margin-bottom: 10px;
 }
@@ -135,9 +140,6 @@ img.avatar {
     border-width: 1px;
     border-color: #c0c0c0;
     margin: 4px 0;
-}
-h1.site-header {
-    margin-bottom: 0;
 }
 header#main p {
     margin-top: 0;

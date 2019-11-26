@@ -1,3 +1,14 @@
-<h1 class="site-header"><a href={{ "/" | absURL }}>{{ .Site.Title }}</a></h1>
-{{ with .Site.Params.Description }}<p>{{ . }}</p>{{ end }}
-{{ partial "site-nav" . }}
+<div class="banner">
+    <h1><a href={{ "/" | absURL }}>{{ .Site.Title }}</a></h1>
+    {{ with .Site.Params.Description }}<p>{{ . }}</p>{{ end }}
+</div>
+<nav class="menu">
+    <ul class="list">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+        <li class="item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+            <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+        </li>
+    {{ end }}
+    </ul>
+</nav>
