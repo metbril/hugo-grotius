@@ -73,9 +73,6 @@ address {
     text-transform: uppercase;
     float: left;
 }
-.menu ul li.active {
-    background-color: aquamarine;
-}
 .menu ul li a {
     display: block;
     text-decoration: none;
@@ -86,6 +83,9 @@ address {
 }
 .menu ul li a:hover {
     background-color: #111;
+}
+.menu ul li.active a {
+    color: #d6e35f;
 }
 /* Site header */
 .banner {
