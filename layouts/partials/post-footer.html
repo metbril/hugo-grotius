@@ -13,6 +13,24 @@
             #<a class="p-category" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" >{{- . -}}</a>
             {{ end }}
         </p>
-    {{ end }}
+        {{ end }}
     </div>
+    {{ with .Params.syndicate_to }}
+    <div class="post-meta">
+        {{ range . }}
+        <a href="{{ . | safeURL }}">
+            {{ $domain:= . | replaceRE "^https?://([^/]+).*" "$1" }}
+            {{ if eq $domain "twitter.com" }}
+            <i class="fab fa-twitter"></i>
+            {{ else if eq $domain "instagram.com" }}
+            <i class="fab fa-instagram"></i>
+            {{ else if eq $domain "swarm.com" }}
+            <i class="fab fa-foursquare"></i>
+            {{ else }}
+            <i class="fas fa-globe"></i>
+            {{ end }}
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
 </footer>
