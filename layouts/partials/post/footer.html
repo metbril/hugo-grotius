@@ -6,7 +6,7 @@
                     {{ .PublishDate.Format "Mon 2 Jan 2006 at 15:04 MST" }}
                 </time>
             </a>
-            {{ with .Params.syndicate_to }}
+            {{ with .Params.SyndicateTo }}
             <span>
                 {{ range . }}
                 <a href="{{ . | safeURL }}">
