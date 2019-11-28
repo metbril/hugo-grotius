@@ -147,6 +147,12 @@ header#main p {
 .post-header {
     margin-bottom: 20px;
 }
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
 .clearfix::after {
   content: "";
   clear: both;
