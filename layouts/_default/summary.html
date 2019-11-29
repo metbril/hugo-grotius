@@ -6,7 +6,7 @@
         <div class="post-meta">
             {{ partial "post-type-icon.html" . }}
             <a href="{{ .Permalink }}" title="{{ .Title }}">
-                {{ .PublishDate.Format "Monday 2 January 2006" }}
+                {{ i18n "publishdate" . }}
             </a>
             <a class="p-author h-card" href="{{ .Site.Params.Author.URL }}"></a>
         </div>

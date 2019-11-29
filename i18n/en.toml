@@ -15,3 +15,8 @@ other = "like"
 other = "page"
 [note]
 other = "note"
+
+# https://gohugo.io/functions/format/
+# https://golang.org/pkg/time/#ANSIC
+[publishdate]
+other = "{{ .PublishDate.Format \"Monday, 2 January 2006 15:04:05 MST\" }}"
