@@ -17,7 +17,8 @@ footer#main {
 }
 /* Post styling */
 .post {
-    margin: 40px 0;
+    margin: 20px 0;
+    border-bottom: #c0c0c0 solid 1px;
 }
 .post-meta {
     color: #999999;
@@ -35,6 +36,7 @@ footer#main {
 }
 .post h1 {
     font-size: 2em;
+    margin: 0;
 }
 .post h1 a,
 .post-meta a {
@@ -115,10 +117,18 @@ ul.pagination {
 }
 li.page-item {
     float: left;
-    padding: 0 15px;
+    padding: .5em 1em;
+    margin: 0 15px;
     text-align: center;
+    background-color: white;
+    border: darkgrey solid 1px;
 }
-
+li.page-item,
+li.page-item a,
+li.page-item a:link,
+li.page-item a:hover {
+    text-decoration: none;
+}
 footer ul.footer-links {
     list-style-type: none;
     margin: 0;
@@ -157,4 +167,10 @@ header#main p {
   content: "";
   clear: both;
   display: table;
+}
+.wrapper {
+    padding: 0 25px;
+}
+.flex {
+    display: flex;
 }
