@@ -1,0 +1,12 @@
+{{/* https://www.webfx.com/tools/emoji-cheat-sheet/ */}}
+{{ if eq .Type "note" -}}
+{{ emojify ":notebook_with_decorative_cover:" }}
+{{- else if eq .Type "article" -}}
+{{ emojify ":newspaper:" }}
+{{- else if eq .Type "bookmark" -}}
+{{ emojify ":bookmark:" }}
+{{- else if eq .Type "like" -}}
+{{ emojify ":heart:" }}
+{{- else -}}
+{{ emojify ":page_facing_up:" }}
+{{- end }}
