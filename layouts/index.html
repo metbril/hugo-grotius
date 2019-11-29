@@ -1,10 +1,14 @@
 {{ define "main" }}
+{{ if .Title }}
 <header>
     <h1>{{ .Title }}</h1>
 </header>
+{{ end }}
+{{ if .Content }}
 <section>
     {{ .Content }}
 </section>
+{{ end }}
 <section class="recent h-feed">
     <h1>{{ i18n "recentposts" }}</h1>
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
