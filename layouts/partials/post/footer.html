@@ -9,7 +9,7 @@
             {{ with .Params.SyndicateTo }}
             <span>
                 {{ range . }}
-                <a href="{{ . | safeURL }}">
+                <a  class="u-syndication" href="{{ . | safeURL }}">
                     {{ $domain:= . | replaceRE "^https?://([^/]+).*" "$1" }}
                     {{ if eq $domain "twitter.com" }}
                     <i class="fab fa-twitter"></i>
