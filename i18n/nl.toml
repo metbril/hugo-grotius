@@ -4,9 +4,6 @@ other = "Door"
 [readmore]
 other = "Lees verder..."
 
-[recentposts]
-other = "Recente berichten"
-
 # page types
 [article]
 other = "artikel"

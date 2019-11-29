@@ -9,8 +9,7 @@
     {{ .Content }}
 </section>
 {{ end }}
-<section class="recent h-feed">
-    <h1>{{ i18n "recentposts" }}</h1>
+<section class="h-feed">
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
     {{ range $paginator.Pages }}
