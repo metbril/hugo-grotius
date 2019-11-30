@@ -8,6 +8,10 @@
     {{ emojify ":bookmark:" }}
     {{- else if eq .Type "like" -}}
     {{ emojify ":heart:" }}
+    {{- else if eq .Type "reply" -}}
+    {{ emojify ":arrow_right_hook:" }}
+    {{- else if eq .Type "repost" -}}
+    {{ emojify ":recycle:" }}
     {{- else -}}
     {{ emojify ":page_facing_up:" }}
     {{- end }}
