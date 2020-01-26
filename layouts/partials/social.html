@@ -4,7 +4,7 @@
         {{ range $.Site.Data.social.social }}
         <li>
             {{ if .url }}
-            <a title="{{ .name }}" href="{{ .url }}">
+            <a title="{{ .name }}" href="{{ .url }}" rel="me">
                 <i class="{{ .style }} {{ .icon }}"></i>
             </a>
             {{ end }}
