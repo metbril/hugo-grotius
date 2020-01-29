@@ -1,0 +1,19 @@
+<article class="post h-entry" id="post-{{ .Permalink | md5 }}">
+    <header class="post-header">
+        <h1 class="p-name">
+            <a href='{{ .Permalink }}'>{{ .Title }}</a>
+        </h1>
+        <div class="post-meta">
+            {{ partial "post-type-icon.html" . }}
+            <a href="{{ .Permalink }}" title="{{ .Title }}">
+                {{ i18n "publishdate" . }}
+            </a>
+            <a class="p-author h-card" href="{{ .Site.Params.Author.URL }}"></a>
+        </div>
+    </header>
+    <section class="post-content e-content">
+        Vindt <a href="{{ .Params.LikeOf }}">een bericht</a> leuk.
+    </section>
+    <footer>
+    </footer>
+</article>
