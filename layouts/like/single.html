@@ -1,18 +1,12 @@
 {{ define "main" }}
 <article class="post h-entry" id="post-{{ .Permalink | md5 }}">
-    <header>
-            <span class="p-name">
-                <a class="u-uid u-url" href="{{ .Permalink }}"><i class="fas fa-heart"></i></a>
-                <span class="p-author h-card">
-                    <a href="{{ .Site.Params.Author.URL }}" class="p-name u-url">{{ .Site.Params.Author.Name }}</a>
-                </span>
-                vindt
-                <a class="u-like-of" href="{{ .Params.LikeOf }}">een bericht</a>
-                van iemand leuk.
-            </span>
-    </header>
-    <section class="post-content e-content">
-    {{ .Content }}
+    <section class="post-content p-name e-content">
+        <span class="p-author h-card">
+            <a href="{{ .Site.Params.Author.URL }}" class="p-name u-url">{{ .Site.Params.Author.Name }}</a>
+        </span>
+        vindt 
+        <a href="{{ .Params.LikeOf }}">een bericht</a> 
+        leuk.
     </section>
     {{ partial "post/footer.html" . }}
 </article>
