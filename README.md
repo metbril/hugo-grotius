@@ -73,6 +73,13 @@ social:
     icon: fa-envelope
     style: fas
 ```
+
+## Localization / Internationalization
+
+The theme has official [i18n](https://gohugo.io/functions/i18n/) support.
+
+To [customize dates](https://gohugo.io/content-management/multilingual/#customize-dates), a per language translation file is available in the `data` folder.
+
 ## Credits
 
 - [Normalize](https://necolas.github.io/normalize.css/) version 8.0.1
