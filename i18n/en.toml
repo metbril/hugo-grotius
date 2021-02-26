@@ -1,8 +1,8 @@
 [By]
-other = "Door"
+other = "By"
 
 [readmore]
-other = "Lees verder..."
+other = "Continue reading..."
 
 # page types
 [article]
