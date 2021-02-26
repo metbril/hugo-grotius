@@ -2,25 +2,21 @@ social:
   - id: twitter
     name: Twitter
     url: https://twitter.com/gohugoio
-    icon: fa-twitter
-    style: fab
+    icon: fa fa-twitter fa-2x
 
   - id: github
     name: GitHub
     url: https://github.com/gohugoio
-    icon: fa-github
-    style: fab
+    icon: fa fa-github fa-2x
 
   - id: spacer1
 
   - id: www
     name: "WWW"
     url: https://gohugo.io
-    icon: fa-globe
-    style: fas
+    icon: fa fa-globe fa-2x
 
   - id: email
     name: "E-mail"
     url: mailto:info@gohugo.io
-    icon: fa-envelope
-    style: fas
+    icon: fa fa-envelope fa-2x
