@@ -22,9 +22,11 @@
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/schema.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
-    {{ partial "head-endpoints" . }}
+    {{ range $.Site.Params.IndieWeb.Endpoint }}
+    <link rel="{{ .rel }}" href="{{ .url }}" />
+    {{ end }}
     {{/* Stylesheet(s) */}}
-    {{ if .Site.Params.LocalStyles }}
+    {{ if .Site.Params.UseLocalStyles }}
     <link rel="stylesheet" href={{ "/css/fork-awesome.min.css" | relURL }} />
     <link rel="stylesheet" href={{ "/css/normalize.css" | relURL }} />
     {{ else }}

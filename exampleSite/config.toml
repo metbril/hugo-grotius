@@ -33,14 +33,24 @@ SectionPagesMenu = "main"
   countryName = "Netherlands"
   note = "Jurist. Writer."
 
-# grotius: IndieWeb Endpoints
-[params.indieweb]
-    AuthorizationEndpoint = "https://indieauth.com/auth"    # default 'https://indieauth.com/auth'
-    TokenEndpoint = "https://tokens.indieauth.com/token"    # default 'https://tokens.indieauth.com/token'
-    Webmention = ""
-    Pingback = ""
-    Micropub = ""
-    Microsub = ""
+[[params.indieweb.endpoint]]
+  rel = "authorization_endpoint"
+  url = "https://indieauth.com/auth"
+[[params.indieweb.endpoint]]
+  rel = "token_endpoint"
+  url = "https://tokens.indieauth.com/token"
+[[params.indieweb.endpoint]]
+  rel = "webmention"
+  url = ""
+[[params.indieweb.endpoint]]
+  rel = "pingback"
+  url = ""
+[[params.indieweb.endpoint]]
+  rel = "micropub"
+  url = ""
+[[params.indieweb.endpoint]]
+  rel = "microsub"
+  url = ""
 
 [[params.social]]
   name = "Twitter"
