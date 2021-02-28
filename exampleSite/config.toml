@@ -41,3 +41,28 @@ SectionPagesMenu = "main"
     Pingback = ""
     Micropub = ""
     Microsub = ""
+
+[[params.social]]
+  name = "Twitter"
+  icon = "fa fa-twitter"
+  weight = 1
+  url = "https://twitter.com/gohugoio"
+  rel = "me"
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github"
+  weight = 11
+  url = "https://github.com/gohugoio"
+  rel = "me"
+[[params.social]]
+  name = "E-mail"
+  icon = "fa fa-envelope"
+  weight = 98
+  url = "mailto:info@example.org"
+[[params.social]]
+  name = "RSS"
+  icon = "fa fa-rss"
+  weight = 99
+  url = "/index.xml"
+  rel = "alternate"
+  type = "application/rss+xml"

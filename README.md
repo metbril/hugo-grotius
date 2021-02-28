@@ -37,11 +37,11 @@ cascade:
 
 ## Social icons
 
-The template has support for a user-defined sets of social icons.
-The icons are configured through an order list 'social' in a data file called `social.yaml` in the `data` folder of your Hugo project.
-The icons are sorted in the order of the file (per the ordered list).
+The template has support for a user-defined set of social icons.
+The icons are configured in the site configuration.
 To add a spacer between 2 icons, just create an item without a url. Just an id will do.
-You can use any icon in the FontAwesome 'solid' and 'brands' styles.
+You can use any available ForkAwesome icon.
+See the configuration file in the example site.
 
 Example file: `data/social.yaml`
 
