@@ -1,5 +1,6 @@
 {{/* https://www.webfx.com/tools/emoji-cheat-sheet/ */}}
-<div class="post-meta post-type">
+<p class="post-meta post-type">
+    {{ if false }}
     {{ if eq .Type "note" -}}
     {{ emojify ":notebook_with_decorative_cover:" }}
     {{- else if eq .Type "article" -}}
@@ -15,5 +16,19 @@
     {{- else -}}
     {{ emojify ":page_facing_up:" }}
     {{- end }}
+    {{else}}
+    {{ if eq .Type "note" -}}
+    <i class="fa fa-sticky-note" ></i>
+    {{- else if eq .Type "article" -}}
+    <i class="fa fa-file"></i>
+    {{- else if eq .Type "bookmark" -}}
+    <i class="fa fa-bookmark"></i>
+    {{- else if eq .Type "like" -}}
+    <i class="fa fa-heart"></i>
+    {{- else -}}
+    <i class="fa fa-file"></i>
+    {{- end }}
+  
+    {{end}}
     {{  .Type | i18n | lower }}
-</div>
+</p>

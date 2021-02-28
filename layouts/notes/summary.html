@@ -1,0 +1,6 @@
+<article class="post h-entry" id="post-{{ .Permalink | md5 }}">
+    <section class="p-summary">
+    {{ .Summary }}
+    </section>
+    {{ partial "post/footer.html" . }}
+</article>

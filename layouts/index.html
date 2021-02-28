@@ -1,15 +1,11 @@
 {{ define "main" }}
-{{ if .Title }}
-<header>
-    <h1>{{ .Title }}</h1>
-</header>
-{{ end }}
-{{ if .Content }}
-<section>
-    {{ .Content }}
-</section>
-{{ end }}
-<section class="h-feed">
+<main class="h-feed">
+    {{ if or (.Title) (.Content) }}
+    <header>
+        {{ with .Title }}<h1>{{ . }}</h1>{{end}}<link class="u-url" href="{{ .Permalink | absURL }}">
+        {{ .Content }}
+    {{ end }}
+    </header>
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
     {{ range $paginator.Pages }}
@@ -18,5 +14,5 @@
     <nav class="pagination">
         {{- template "_internal/pagination.html" . -}}
     </nav>
-</section>
+</main>
 {{ end }}

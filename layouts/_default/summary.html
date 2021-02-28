@@ -11,7 +11,9 @@
             <a class="p-author h-card" href="{{ .Site.Params.Author.URL }}"></a>
         </div>
     </header>
-    <section class="post-content e-content">
-    {{ .Content }}
+    <section class="p-summary">
+    {{ .Summary }}
     </section>
+    {{ if .Truncated }}<a href="{{ .RelPermalink }}">{{ i18n "readmore" }}</a>{{ end }}
+    {{ partial "post/footer.html" . }}
 </article>

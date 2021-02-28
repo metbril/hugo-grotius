@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="h-feed">
+  <header>
+    {{ with .Title}}<h1>{{ . }}</h1>{{ end }}
+    {{ with .Content }}{{ . }}{{ end }}
+  </header>
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" (slice "article" "notes")) }}
+  {{ range $paginator.Pages }}
+  {{ .Render "summary" }}
+  {{ end }}
+  <nav class="pagination">
+    {{- template "_internal/pagination.html" . -}}
+</nav>
+</main>
+{{ end }}

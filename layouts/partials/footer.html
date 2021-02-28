@@ -1,3 +1,6 @@
-{{ partial "h-card.html" . }}
-<div>{{ partial "social" . }}</div>
-<div>{{ .Site.Copyright }}</div>
+<footer id="main">
+  {{ partial "h-card.html" . }}
+  <div>{{ partial "channels" . }}</div>
+  <div>{{ partial "social" . }}</div>
+  <div>{{ .Site.Copyright }}</div>
+</footer>

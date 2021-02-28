@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-    {{- partial "head.html" . -}}
+    {{ partial "head.html" . }}
     <body>
-        <div id="main">
-            <header id="main">
-            {{- partial "header.html" . -}}
-            </header>
-            <main class="wrapper flex">
-            {{- block "main" . }}{{- end }}
-            </main>
-            <footer id="main">
-            {{- partial "footer.html" . -}}
-            </footer>
-        </div>
+        {{ partial "header.html" . }}
+        {{ block "main" . }}{{ end }}
+        {{ partial "footer.html" . }}
     </body>
 </html>
