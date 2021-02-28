@@ -1,26 +1,28 @@
-{{ if false }}
+{{ if .Site.Params.useEmoji }}
   {{/* https://www.webfx.com/tools/emoji-cheat-sheet/ */}}
   {{ if eq .Type "note" -}}
-  {{ emojify ":notebook_with_decorative_cover:" }}
+    {{ emojify ":notebook_with_decorative_cover:" }}
   {{- else if eq .Type "article" -}}
-  {{ emojify ":newspaper:" }}
+    {{ emojify ":newspaper:" }}
   {{- else if eq .Type "bookmark" -}}
-  {{ emojify ":bookmark:" }}
+    {{ emojify ":bookmark:" }}
   {{- else if eq .Type "like" -}}
-  {{ emojify ":heart:" }}
+    {{ emojify ":heart:" }}
   {{- else -}}
-  {{ emojify ":page_facing_up:" }}
+    {{ emojify ":page_facing_up:" }}
   {{- end }}
 {{ else }}
-  {{ if eq .Type "note" -}}
-  <i class="fa fa-sticky-note"></i>
+  {{ $icon := "" }}
+  {{ if eq .Type "notes" -}}
+    {{ $icon = "fa-sticky-note" }}
   {{- else if eq .Type "article" -}}
-  <i class="fa fa-file"></i>
+    {{ $icon = "fa-file-text-o" }}
   {{- else if eq .Type "bookmark" -}}
-  <i class="fa fa-bookmark"></i>
+    {{ $icon = "fa-bookmark" }}
   {{- else if eq .Type "like" -}}
-  <i class="fa fa-heart"></i>
+    {{ $icon = "fa fa-heart" }}
   {{- else -}}
-  <i class="fa fa-file"></i>
+    {{ $icon = "fa fa-file-o" }}
   {{- end }}
+  <i class="fa {{ $icon }} fa-fw"></i>
 {{ end }}
