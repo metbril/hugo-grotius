@@ -182,7 +182,7 @@ img.avatar {
     width: 128px;
     border-radius: 50%;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-color: #c0c0c0;
     margin: 4px 0;
 }
@@ -219,13 +219,24 @@ article {
 }
 article header {
     border-bottom:solid 1px #ccc;
-    background-color: #eee;
     padding: 10px;
 }
 article footer {
-    background-color: #eee;
     padding: 5px 10px;
 }
 article * {
     padding: 0 0;
+}
+
+.post-header h1 i {
+    color: cornflowerblue;
+}
+
+footer#main .avatar {
+    border-radius: 4px;
+    margin: 8px;
+}
+
+nav#social ul li a {
+    color: #000;
 }
