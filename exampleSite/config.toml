@@ -24,11 +24,11 @@ SectionPagesMenu = "main"
   localStyles = true
 
 # grotius: h-card properties
-[params.author]
+[author]
   name = "Hugo Grotius"
   url = "https://en.wikipedia.org/wiki/Hugo_Grotius"
-  photo = "/images/hugo.jpg"
   email = "hugo.grotius@example.com"
+  photo = "/images/hugo.jpg"
   locality = "Delft"
   countryName = "Netherlands"
   note = "Jurist. Writer."

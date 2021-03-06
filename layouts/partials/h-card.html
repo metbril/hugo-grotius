@@ -1,20 +1,20 @@
-{{ with $.Site.Params.author }}
+{{ with $.Site.Author }}
 <div class="h-card hcard clearfix">
-    <img class="avatar u-photo left" src="{{ .photo }}">
+    <img class="avatar u-photo left" src="{{ .Photo }}">
     <p class="p-name">
-        <a class="u-url u-uid" href="{{ .url }}">
-            {{ .name }}
+        <a class="u-url u-uid" href="{{ .URL }}">
+            {{ .Name }}
         </a>
     </p>
-    <p class="p-note">{{ .note }}</p>
+    <p class="p-note">{{ .Note }}</p>
     <p class="p-email">
-        <a href="mailto:{{ .email }}">
-            {{ .email }}
+        <a href="mailto:{{ .Email }}">
+            {{ .Email }}
         </a>
     </p>
     <p class="p-adr h-adr">
-      <span class="p-locality">{{ .locality }}</span>
-      <span class="p-country-name">{{ .countryname }}</span>
+      <span class="p-locality">{{ .Locality }}</span>,
+      <span class="p-country-name">{{ .CountryName }}</span>
     </p>
 </div>
 {{ end }}
