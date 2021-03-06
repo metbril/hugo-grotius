@@ -8,7 +8,7 @@
             <a href="{{ .Permalink }}" title="{{ .Title }}">
                 {{ i18n "publishdate" . }}
             </a>
-            <a class="p-author h-card" href="{{ .Site.Author.URL | default ("/" | absURL) }}"></a>
+            <a class="p-author h-card" href="{{ .Site.Author.url | default ("/" | absURL) }}"></a>
         </div>
     </header>
     <section class="p-summary">

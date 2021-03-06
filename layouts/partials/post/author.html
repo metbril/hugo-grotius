@@ -1,8 +1,8 @@
-{{ with $.Site.Author }}
+{{ with .Site.Author }}
 <address class="author p-author vcard hcard h-card byline" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <link class="u-photo" alt="" src="{{ .Photo }}" />
-    <a class="url uid u-url u-uid fn p-name" href="{{ .URL | default ("/" | absURL) }}" title="{{ .Name }}" rel="author" itemprop="url">
-        <span itemprop="name">{{ .Name }}</span>
+    <link class="u-photo" src="{{ .photo }}" />
+    <a class="url uid u-url u-uid fn p-name" href="{{ .url | default ("/" | absURL) }}" title="{{ .name }}" rel="author" itemprop="url">
+        <span itemprop="name">{{ .name }}</span>
     </a>
 </address>
 {{ end }}
