@@ -1,28 +1,4 @@
-{{ if .Site.Params.useEmoji }}
-  {{/* https://www.webfx.com/tools/emoji-cheat-sheet/ */}}
-  {{ if eq .Type "note" -}}
-    {{ emojify ":notebook_with_decorative_cover:" }}
-  {{- else if eq .Type "article" -}}
-    {{ emojify ":newspaper:" }}
-  {{- else if eq .Type "bookmark" -}}
-    {{ emojify ":bookmark:" }}
-  {{- else if eq .Type "like" -}}
-    {{ emojify ":heart:" }}
-  {{- else -}}
-    {{ emojify ":page_facing_up:" }}
-  {{- end }}
-{{ else }}
-  {{ $icon := "" }}
-  {{ if eq .Type "notes" -}}
-    {{ $icon = "fa-sticky-note" }}
-  {{- else if eq .Type "article" -}}
-    {{ $icon = "fa-file-text-o" }}
-  {{- else if eq .Type "bookmark" -}}
-    {{ $icon = "fa-bookmark" }}
-  {{- else if eq .Type "like" -}}
-    {{ $icon = "fa fa-heart" }}
-  {{- else -}}
-    {{ $icon = "fa fa-file-o" }}
-  {{- end }}
-  <i class="fa {{ $icon }} fa-fw"></i>
-{{ end }}
+{{- $default := "fa fa-file-o fa-fw" -}}
+{{- $m := index (where .Site.Params.PostType "name" .Type) 0 -}}
+{{ $icon := $m.icon }}
+<i class="{{ $icon | default $default }}"></i>
