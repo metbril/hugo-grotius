@@ -1,5 +1,5 @@
 <footer id="main">
-  {{ partial "h-card.html" . }}
+  {{ if not .IsHome }}{{ partial "h-card.html" . }}{{ end }}
   <div>{{ partial "channels" . }}</div>
   <div>{{ partial "social" . }}</div>
   <div>{{ .Site.Copyright }}</div>
