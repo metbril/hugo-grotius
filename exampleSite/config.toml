@@ -58,6 +58,7 @@ SectionPagesMenu = "main"
   weight = 1
   url = "https://twitter.com/gohugoio"
   rel = "me"
+  color = "#1da1f2"
 [[params.social]]
   name = "Github"
   icon = "fa fa-github"

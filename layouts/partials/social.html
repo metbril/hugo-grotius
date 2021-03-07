@@ -5,7 +5,7 @@
         {{ range $.Site.Params.Social }}
         <li>
             <a title="{{ .name }}" href="{{ .url | default '#' }}" rel={{ .rel }}>
-                <i class="{{ .icon }}"></i>
+                <i class="{{ .icon }}"{{ with .color }} style="color:{{ . }};"{{ end }}></i>
             </a>
         </li>
         {{ end }}
