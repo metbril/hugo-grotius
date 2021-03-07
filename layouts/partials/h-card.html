@@ -1,20 +1,25 @@
 {{ with $.Site.Author }}
-<div class="h-card hcard clearfix">
-    <img class="avatar u-photo left" src="{{ .photo }}">
-    <p class="p-name">
-        <a class="u-url u-uid" href="{{ .url }}">
-            {{ .name }}
-        </a>
-    </p>
-    <p class="p-note">{{ .note }}</p>
-    <p class="p-email">
-        <a href="mailto:{{ .email }}">
-            {{ .email }}
-        </a>
-    </p>
-    <p class="p-adr h-adr">
-      <span class="p-locality">{{ .locality }}</span>,
-      <span class="p-country-name">{{ .countryname }}</span>
-    </p>
+<div class="h-card hcard flex">
+    <div>
+        <img class="avatar u-photo" src="{{ .photo }}">
+    </div>
+    <div>
+        <p class="p-name">
+            <a class="u-url u-uid" href="{{ .url }}">
+                {{ .name }}
+            </a>
+        </p>
+        <p class="p-note">{{ .note | safeHTML }}</p>
+        <p class="p-email">
+            E-mail:
+            <a href="mailto:{{ .email }}">
+                {{ .email }}
+            </a>
+        </p>
+        <p class="p-adr h-adr">
+          Adres: <span class="p-locality">{{ .locality }}</span>,
+          <span class="p-country-name">{{ .countryname }}</span>
+        </p>
+    </div>
 </div>
 {{ end }}
