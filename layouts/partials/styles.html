@@ -1,0 +1,6 @@
+{{ $styles := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
+{{ if .Site.Params.inlinecss }}
+<style>{{ $styles.Content | safeCSS }}</style>
+{{ else }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ end }}

@@ -23,6 +23,8 @@ SectionPagesMenu = "main"
   # Grotius theme
   localStyles = true
 
+  # inlinecss = false
+
 # grotius: h-card properties
 [author]
   name = "Hugo Grotius"
