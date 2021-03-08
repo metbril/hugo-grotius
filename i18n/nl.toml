@@ -16,6 +16,9 @@ other = "pagina"
 [note]
 other = "notitie"
 
+[authorcard_name]
+other = "Over"
+
 # https://gohugo.io/functions/format/
 # https://golang.org/pkg/time/#ANSIC
 # https://github.com/nikalon/nikalon-hugo-theme/tree/master#optional-translate--override-months

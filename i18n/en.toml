@@ -16,6 +16,9 @@ other = "page"
 [note]
 other = "note"
 
+[authorcard_name]
+other = "About"
+
 # https://gohugo.io/functions/format/
 # https://golang.org/pkg/time/#ANSIC
 [publishdate]

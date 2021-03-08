@@ -32,6 +32,8 @@ h2 {
 		}
 	}
 }
+
+/* Post */
 .post {
 	margin: 20px 0;
 	border-bottom: #c0c0c0 solid 1px;
@@ -46,37 +48,37 @@ h2 {
 			}
 		}
 	}
-	header {
+	.post-meta {
+		color: #999999;
+		font-size: 80%;
+		.avatar {
+			width: 48px;
+			float: left;
+			margin-right: 8px;
+			border-radius: 50%;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			text-decoration: inherit;
+			color: inherit;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.post-type {
+		font-weight: bold;
+	}	header {
 		margin-bottom: 10px;
 	}
 	footer {
 		margin-top: 10px;
 	}
 }
-.post-meta {
-	color: #999999;
-	font-size: 80%;
-	.avatar {
-		width: 48px;
-		float: left;
-		margin-right: 8px;
-		border-radius: 50%;
-	}
-	p {
-		margin: 0;
-		padding: 0;
-	}
-	a {
-		text-decoration: inherit;
-		color: inherit;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-}
-.post-type {
-	font-weight: bold;
-}
+
 .photo-padding {
 	padding-left: 72px;
 }
@@ -274,5 +276,43 @@ nav#social {
 				color: #000;
 			}
 		}
+	}
+}
+
+@mixin clearfix {
+	display: block;
+	&::after {
+		display: block;
+		height: 0;
+		padding: 0;
+		margin: 0;
+		clear: both;
+		line-height: 0;
+		visibility: hidden;
+		content: "";
+	}
+}
+
+// Authorcard
+.author-card {
+	@include clearfix;
+	line-height: 1.5;
+	display: block;
+	.author-photo {
+		float: left;
+		margin: 0 25px 0 0;
+		height: 128px;
+		width: 128px;
+		img {
+			border-radius: 50%;
+		}
+	}
+	.author-header {
+		margin-bottom: 10px;
+	}
+	.author-name {
+		text-transform: uppercase;
+		font-size: 1rem;
+		font-weight: 700;
 	}
 }

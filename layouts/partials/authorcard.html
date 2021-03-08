@@ -1,25 +1,26 @@
 {{ with $.Site.Author }}
-<div class="h-card hcard flex">
-    <div>
-        <img class="avatar u-photo" src="{{ .photo }}">
-    </div>
-    <div>
-        <p class="p-name">
-            <a class="u-url u-uid" href="{{ .url }}">
-                {{ .name }}
-            </a>
-        </p>
-        <p class="p-note">{{ .note | safeHTML }}</p>
-        <p class="p-email">
-            E-mail:
-            <a href="mailto:{{ .email }}">
-                {{ .email }}
-            </a>
-        </p>
-        <p class="p-adr h-adr">
-          Adres: <span class="p-locality">{{ .locality }}</span>,
-          <span class="p-country-name">{{ .countryname }}</span>
-        </p>
-    </div>
+<div class="author-card h-card hcard">
+    {{ if .photo }}
+    <figure class="author-photo">
+        <img class="u-photo" alt="{{ .name }}" src="{{ .photo | relURL }}">
+    </figure>
+    {{ end }}
+    {{ if .name }}
+	<div class="author-header">
+		<span class="author-name">
+            {{ T "authorcard_name" }}
+            {{ if .url }}
+                <a href="{{ .url }}" class="p-name u-url" rel="me">{{ .name }}</a>
+            {{ else }}
+                <span class="p-name">{{ .name }}</span>
+            {{ end }}
+        </span>
+	</div>
+	{{ end }}
+	{{ with .note }}
+	<div class="p-note">
+		{{ . | safeHTML }}
+	</div>
+	{{ end }}
 </div>
 {{ end }}
