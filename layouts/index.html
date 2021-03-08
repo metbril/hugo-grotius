@@ -7,7 +7,7 @@
     {{ end }}
     </header>
     <section>
-        {{ partial "h-card.html" . }}
+        {{ partial "authorcard.html" . }}
     </section>
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
