@@ -169,30 +169,37 @@ nav {
 		}
 	}
 }
-/* Pagination */
-ul.pagination {
+
+/* Internal pagination classes */
+.pagination {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: visible;
 	overflow: hidden;
-}
-li.page-item {
-	float: left;
-	padding: .5em 1em;
-	margin: 0 15px;
-	text-align: center;
-	background-color: white;
-	border: darkgrey solid 1px;
-	text-decoration: none;
-	a {
+	.page-item {
+		float: left;
+		padding: .5em 1em;
+		margin: 0 15px;
+		text-align: center;
+		background-color: white;
+		border: darkgrey solid 1px;
 		text-decoration: none;
-		&:link {
+		.page-link {
 			text-decoration: none;
+			&:link {
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: none;
+			}
 		}
-		&:hover {
-			text-decoration: none;
-		}
+	}
+	.pageitem.disabled {
+
+	}
+	.pageitem.active {
+
 	}
 }
 /* Main header and footer */
