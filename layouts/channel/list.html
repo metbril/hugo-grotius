@@ -4,7 +4,8 @@
     {{ with .Title}}<h1>{{ . }}</h1>{{ end }}
     {{ with .Content }}{{ . }}{{ end }}
   </header>
-  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" (slice "article" "notes")) }}
+  {{ $pages := (where .Site.RegularPages "Type" "in" (.Params.Channel)) | default .Site.RegularPages }}
+  {{ $paginator := .Paginate $pages }}
   {{ range $paginator.Pages }}
   {{ .Render "summary" }}
   {{ end }}
