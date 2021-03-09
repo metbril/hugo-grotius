@@ -173,7 +173,7 @@ nav {
 /* Internal pagination classes */
 .pagination {
 	list-style-type: none;
-	margin: 0;
+	margin: .5em 0;
 	padding: 0;
 	overflow: visible;
 	overflow: hidden;
@@ -269,6 +269,7 @@ header#main {
 	@include clearfix;
 	line-height: 1.5;
 	display: block;
+	margin: 1em 0;
 	.author-photo {
 		float: left;
 		margin: 0 25px 0 0;
