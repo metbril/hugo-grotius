@@ -1,0 +1,7 @@
+{{ if $.Site.Params.IndieWeb }}
+{{ range $.Site.Params.IndieWeb.Endpoint }}
+{{ if .url }}
+<link rel="{{ .rel }}" href="{{ .url }}" />
+{{ end }}
+{{ end }}
+{{ end }}
