@@ -36,6 +36,9 @@ SectionPagesMenu = "main"
   countryName = "Netherlands"
   note = "Jurist. Writer."
 
+[params.indieweb]
+  # indiewebring = ""
+
 [[params.indieweb.endpoint]]
   rel = "authorization_endpoint"
   url = "https://indieauth.com/auth"

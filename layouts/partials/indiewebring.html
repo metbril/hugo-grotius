@@ -1,0 +1,6 @@
+{{ with $.Site.Params.IndieWeb.indiewebring }}
+{{ $url := print "https://xn--sr8hvo.ws/" . }}
+<a class="indiewebring" href="{{ $url }}/previous">←</a>
+{{ T "indiewebring" }} 🕸💍
+<a class="indiewebring" href="{{ $url }}/next">→</a>
+{{ end }}

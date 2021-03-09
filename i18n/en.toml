@@ -19,6 +19,9 @@ other = "note"
 [authorcard_name]
 other = "About"
 
+[indiewebring]
+other = "An IndieWeb Webring"
+
 # https://gohugo.io/functions/format/
 # https://golang.org/pkg/time/#ANSIC
 [publishdate]

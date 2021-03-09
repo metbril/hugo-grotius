@@ -19,6 +19,9 @@ other = "notitie"
 [authorcard_name]
 other = "Over"
 
+[indiewebring]
+other = "Een IndieWeb Webring"
+
 # https://gohugo.io/functions/format/
 # https://golang.org/pkg/time/#ANSIC
 # https://github.com/nikalon/nikalon-hugo-theme/tree/master#optional-translate--override-months
