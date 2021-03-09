@@ -1,3 +1,10 @@
+{{ if .Site.Params.UseLocalStyles }}
+<link rel="stylesheet" href={{ "/css/fork-awesome.min.css" | relURL }} />
+<link rel="stylesheet" href={{ "/css/normalize.css" | relURL }} />
+{{ else }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+{{ end}}
 {{ $styles := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
 {{ if .Site.Params.inlinecss }}
 <style>{{ $styles.Content | safeCSS }}</style>
