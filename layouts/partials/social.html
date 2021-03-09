@@ -1,9 +1,8 @@
-{{/* Parse file /data/social.yaml */}}
 <nav class="social">
     <ul class="footer-links">
         {{ range $.Site.Params.Social }}
         <li>
-            <a title="{{ .name }}" href="{{ .url | default '#' }}" rel={{ .rel }}>
+            <a title="{{ .name }}" href="{{ .url }}" rel="{{ .rel }}">
                 <i class="{{ .icon }}"{{ with .color }} style="color:{{ . }};"{{ end }}></i>
             </a>
         </li>
