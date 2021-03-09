@@ -51,7 +51,23 @@ article {
 		padding: 0 0;
 	}
 }
-
+nav {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+		overflow: hidden;
+		li {
+			float: left;
+			a {
+				display: block;
+				text-decoration: none;
+				text-align: center;
+			}
+		}
+	}
+}
 /* Post */
 .post {
 	margin: 20px 0;
@@ -101,23 +117,14 @@ article {
 	}
 }
 
-/* Menu */
+/* Main menu */
 .menu {
 	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: visible;
-		overflow: hidden;
 		background-color: #333;
 		li {
 			font-weight: bold;
 			text-transform: uppercase;
-			float: left;
 			a {
-				display: block;
-				text-decoration: none;
-				text-align: center;
 				color: white;
 				padding: 0 4px;
 				padding: 14px 16px;
@@ -133,21 +140,22 @@ article {
 		}
 	}
 }
+/* Social menu */
+.social {
+	ul {
+		li {
+			a {
+				color: #000;
+			}
+		}
+	}
+}
 .channels {
 	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: visible;
-		overflow: hidden;
 		margin: 4px 0;
 		padding: 4px 0;
 		li {
-			float: left;
 			a {
-				display: block;
-				text-decoration: none;
-				text-align: center;
 				color: #000;
 				padding: 0 4px;
 				&:hover {
@@ -162,6 +170,7 @@ article {
 		}
 	}
 }
+/* Pagination */
 ul.pagination {
 	list-style-type: none;
 	margin: 0;
@@ -187,6 +196,7 @@ li.page-item {
 		}
 	}
 }
+/* Main header and footer */
 footer#main {
 	font-size: .8em;
 	margin-top: 3em;
@@ -232,15 +242,6 @@ header#main {
 }
 .flex {
 	display: flex;
-}
-nav#social {
-	ul {
-		li {
-			a {
-				color: #000;
-			}
-		}
-	}
 }
 
 @mixin clearfix {
