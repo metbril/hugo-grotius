@@ -24,6 +24,7 @@ SectionPagesMenu = "main"
   localStyles = true
 
   # inlinecss = false
+  # authorcard = false
 
 # grotius: h-card properties
 [author]

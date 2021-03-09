@@ -10,5 +10,6 @@
     <nav class="pagination">
         {{ template "_internal/pagination.html" . }}
     </nav>
+    {{ partialCached "authorcard.html" . }}
 </main>
 {{ end }}
