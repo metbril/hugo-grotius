@@ -10,9 +10,6 @@
             {{ .PublishDate.Format "Monday 2 January 2006" }}
         </a>
     </div>
-    {{ if .Params.InReplyTo }}
-    <div class="post-meta">
-        In reactie op <a class="u-in-reply-to" href="{{ .Params.InReplyTo }}">een bericht</a> van iemand.
-    </div>
     {{ end }}
+    {{ partial "post/post-meta.html" . }}
 </header>

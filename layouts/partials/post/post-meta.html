@@ -1,0 +1,14 @@
+{{ with .Param "indieweb.reply" }}
+{{ if .link }}
+<div class="post-meta">
+	{{ T "meta_reply_to" }}: <a class="u-in-reply-to" href="{{ .link }}" target="_blank" rel="noopener">{{ .title | default .link }}</a>
+</div>
+{{ end }}
+{{ end }}
+{{ with .Param "indieweb.like" }}
+{{ if .link }}
+<div class="post-meta">
+	{{ T "meta_like_of" }}: <a class="u-like-of" href="{{ .link }}" target="_blank" rel="noopener">{{ .title | default .link }}</a>
+</div>
+{{ end }}
+{{ end }}

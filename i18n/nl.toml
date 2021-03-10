@@ -22,6 +22,12 @@ other = "Over"
 [indiewebring]
 other = "Een IndieWeb Webring"
 
+[meta_reply_to]
+other = "In antwoord op"
+
+[meta_like_of]
+other = "Vindt leuk"
+
 # https://gohugo.io/functions/format/
 # https://golang.org/pkg/time/#ANSIC
 # https://github.com/nikalon/nikalon-hugo-theme/tree/master#optional-translate--override-months
