@@ -1,22 +1,52 @@
-/* Post styling */
-/* Standard HTML tags */
-/* menu */
-/* channels */
-/* Site header */
-/* post */
-/* Paginator */
+:root {
+	--sans-font: -apple-system,BlinkMacSystemFont,"Avenir Next",Avenir,"Nimbus Sans L",Roboto,Noto,"Segoe UI",Arial,Helvetica,"Helvetica Neue",sans-serif;
+	--mono-font: Consolas,Menlo,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+	--base-fontsize: 1.15rem;
+	--header-scale: 1.25;
+	--line-height: 1.618;
+	--bg: #FFF;
+	--accent-bg: #F5F7FF;
+	--text: #212121;
+	--text-light: #585858;
+	--border: #D8DAE1;
+	--accent: #0D47A1;
+	--accent-light: #90CAF9;
+	--code: #D81B60;
+	--preformatted: #444;
+	--marked: #FFDD33;
+	--disabled: #EFEFEF;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #212121;
+    --accent-bg: #2B2B2B;
+    --text: #DCDCDC;
+    --text-light: #ABABAB;
+    --border: #666;
+    --accent: #FFB300;
+    --accent-light: #FFECB3;
+    --code: #F06292;
+    --preformatted: #CCC;
+    --disabled: #111;
+  }
+  img, video {
+    opacity: .6;
+  }
+}
 html {
-	line-height: 1.5;
+	line-height: 1.5em;
 }
 body {
-	font-family: sans-serif;
+	font-family: var(--sans-font);
 	margin: 0 auto;
 	max-width: 700px;
 	padding: 10px;
+	color: var(--text);
+	background: var(--bg);
 }
 h1 {
 	a {
-		color: #000;
+		color: var(--text);
 		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
@@ -25,7 +55,7 @@ h1 {
 }
 h2 {
 	a {
-		color: #000;
+		color: var(--text);
 		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
@@ -79,8 +109,6 @@ nav {
 		margin-top: 10px;
 	}
 	h1 {
-		font-size: 2em;
-		margin: 0;
 		a {
 			text-decoration: inherit;
 			color: inherit;
@@ -203,6 +231,14 @@ nav {
 	}
 }
 /* Main header and footer */
+header#main {
+	h1 {
+		color: var(--text);
+	}
+	p {
+		color: var(--text);
+	}
+}
 footer#main {
 	font-size: .8em;
 	margin-top: 3em;
@@ -211,24 +247,12 @@ footer#main {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-	}
-}
-footer {
-	ul.footer-links {
 		li {
 			margin: 0;
 			padding: 0;
 			flex: auto;
 			text-align: center;
 		}
-	}
-}
-header#main {
-	h1 {
-		margin: 0;
-	}
-	p {
-		margin: 0;
 	}
 }
 
@@ -269,7 +293,7 @@ header#main {
 	@include clearfix;
 	line-height: 1.5;
 	display: block;
-	margin: 1em 0;
+	margin: 2em 0;
 	.author-photo {
 		float: left;
 		margin: 0 25px 0 0;
