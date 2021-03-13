@@ -1,9 +1,9 @@
 {{ define "main" }}
 <main class="h-feed">
-    <header>
+    <div>
         <h1 class="p-name">{{ .Title }}</h1><link class="u-url" href="{{ .Permalink | absURL }}">
         {{ .Content }}
-    </header>
+    </div>
     {{ range .Paginator.Pages }}
         {{ .Render "summary" }}
     {{ end }}

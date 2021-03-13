@@ -1,5 +1,5 @@
 <article class="post h-entry" id="post-{{ .Permalink | md5 }}">
-    <header class="post-header">
+    <div class="post-header">
         <h1 class="p-name">
             <a href='{{ .Permalink }}'>{{ .Title }}</a>
         </h1>
@@ -10,10 +10,10 @@
             </a>
             <a class="p-author h-card" href="{{ .Site.Author.url | default ("/" | absURL) }}"></a>
         </div>
-    </header>
+    </div>
     <section class="post-content e-content">
         Vindt <a href="{{ .Params.LikeOf }}">een bericht</a> leuk.
     </section>
-    <footer>
-    </footer>
+    <div>
+    </div>
 </article>

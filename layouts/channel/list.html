@@ -1,9 +1,9 @@
 {{ define "main" }}
 <main class="h-feed">
-  <header>
+  <div>
     {{ with .Title}}<h1>{{ . }}</h1>{{ end }}
     {{ with .Content }}{{ . }}{{ end }}
-  </header>
+  </div>
   {{ $pages := (where .Site.RegularPages "Type" "in" (.Params.Channel)) | default .Site.RegularPages }}
   {{ $paginator := .Paginate $pages }}
   {{ range $paginator.Pages }}

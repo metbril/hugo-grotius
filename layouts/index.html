@@ -1,11 +1,11 @@
 {{ define "main" }}
 <main class="h-feed">
     {{ if or (.Title) (.Content) }}
-    <header>
+    <div>
         {{ with .Title }}<h1>{{ . }}</h1>{{end}}<link class="u-url" href="{{ .Permalink | absURL }}">
         {{ .Content }}
     {{ end }}
-    </header>
+    </div>
     {{ partialCached "authorcard.html" . }}
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
     {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
