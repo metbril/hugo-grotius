@@ -67,6 +67,8 @@ article {
 		padding: 0 0;
 	}
 }
+
+/* Make horizontal menus */
 nav {
 	ul {
 		list-style-type: none;
@@ -84,6 +86,7 @@ nav {
 		}
 	}
 }
+
 /* Post */
 .post {
 	margin: 20px 0;
@@ -128,15 +131,6 @@ nav {
 	}
 	.post-type {
 		font-weight: bold;
-	}
-}
-
-/* Main menu */
-.menu {
-	ul {
-		li {
-			text-transform: uppercase;
-		}
 	}
 }
 

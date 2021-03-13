@@ -1,14 +1,9 @@
 <header id="main">
     <h1><a href={{ "/" | absURL }}>{{ .Site.Title }}</a></h1>
     {{ with .Site.Params.Description }}<p><cite>{{ . | safeHTML }}</cite></p>{{ end }}
-    <nav class="menu">
-        <ul class="list">
-        {{ $currentPage := . }}
+    <nav>
         {{ range .Site.Menus.main }}
-            <li class="item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
-                <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-            </li>
+        <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
         {{ end }}
-        </ul>
     </nav>
 </header>
