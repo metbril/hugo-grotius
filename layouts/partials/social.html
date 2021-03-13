@@ -1,11 +1,3 @@
-<nav class="social">
-    <ul class="footer-links">
-        {{ range $.Site.Params.Social }}
-        <li>
-            <a title="{{ .name }}" href="{{ .url }}" rel="{{ .rel }}">
-                <i class="{{ .icon }}"{{ with .color }} style="color:{{ . }};"{{ end }}></i>
-            </a>
-        </li>
-        {{ end }}
-    </ul>                
-</nav>
+{{ range $.Site.Params.Social }}
+<a title="{{ .name }}" href="{{ .url }}" rel="{{ .rel }}"><i class="{{ .icon }}"{{ with .color }} style="color:{{ . }};"{{ end }}></i></a>
+{{ end }}

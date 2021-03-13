@@ -68,25 +68,6 @@ article {
 	}
 }
 
-/* Make horizontal menus */
-nav {
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: visible;
-		overflow: hidden;
-		li {
-			float: left;
-			a {
-				display: block;
-				text-decoration: none;
-				text-align: center;
-			}
-		}
-	}
-}
-
 /* Post */
 .post {
 	margin: 20px 0;
@@ -131,39 +112,6 @@ nav {
 	}
 	.post-type {
 		font-weight: bold;
-	}
-}
-
-/* Social menu */
-.social {
-	ul {
-		li {
-			a {
-				color: #000;
-			}
-		}
-	}
-}
-
-/* Channels menu */
-.channels {
-	ul {
-		margin: 4px 0;
-		padding: 4px 0;
-		li {
-			a {
-				color: #000;
-				padding: 0 4px;
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-		}
-		li.active {
-			a {
-				color: #d6e35f;
-			}
-		}
 	}
 }
 
