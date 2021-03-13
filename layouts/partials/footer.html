@@ -1,6 +1,7 @@
 <footer id="main">
   <div>{{ partial "channels" . }}</div>
   <div>{{ partialCached "social" . }}</div>
+  <div><nav>{{partialCached "language" . }}</nav></div>
   <div>{{ .Site.Copyright }}</div>
   <div>{{ partialCached "indiewebring" . }}</div>
 </footer>
