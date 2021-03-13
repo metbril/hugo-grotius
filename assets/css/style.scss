@@ -52,12 +52,7 @@ address {
 	font-style: normal;
 }
 article {
-	border-radius: 5px;
-	border-color: #ccc;
-	border-style: solid;
-	border-width: 1px;
 	header {
-		border-bottom: solid 1px #ccc;
 		padding: 10px;
 	}
 	footer {
@@ -71,7 +66,6 @@ article {
 /* Post */
 .post {
 	margin: 20px 0;
-	border-bottom: #c0c0c0 solid 1px;
 	header {
 		margin-bottom: 10px;
 	}
@@ -128,7 +122,6 @@ article {
 		margin: 0 15px;
 		text-align: center;
 		background-color: white;
-		border: darkgrey solid 1px;
 		text-decoration: none;
 		.page-link {
 			text-decoration: none;
@@ -159,7 +152,6 @@ header#main {
 footer#main {
 	font-size: .9em;
 	margin-top: 3em;
-	border-top: 1px solid var(--border);
 	color: var(--text-light);
 
 	ul.footer-links {
