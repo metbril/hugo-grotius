@@ -13,7 +13,7 @@
     {{ .Render "summary" }}
     {{ end }}
     <nav class="pagination">
-        {{- template "_internal/pagination.html" . -}}
+        {{- partial "pagination" . -}}
     </nav>
 </main>
 {{ end }}
