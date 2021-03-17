@@ -1,12 +1,11 @@
 {{ define "main" }}
 <main>
     <article class="post h-entry" id="post-{{ .Permalink | md5 }}">
-        {{ partial "post/header.html" . }}
+        {{ partial "post/header" . }}
         <section class="post-content e-content">
-        {{ .Content }}
+            {{ .Content }}
         </section>
-        {{ partial "post/footer.html" . }}
-        {{ partialCached "authorcard.html" . }}
+        {{ partial "post/footer" . }}
     </article>
 </main>
 {{ end }}
