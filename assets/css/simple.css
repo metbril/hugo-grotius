@@ -75,7 +75,7 @@ main {
 }
 
 /* Make the header bg full width, but the content inline with body */
-header {
+body > header {
 	background: var(--accent-bg);
 	border-bottom: 1px solid var(--border);
   padding: 1.5rem 15rem;
@@ -84,23 +84,23 @@ header {
 
 /* Reduces header padding on smaller screens */
 @media only screen and (max-width: 1200px) {
-  header {
+  body > header {
     padding: 1rem;
   }
 
-  nav {
+  body > nav {
     text-align: center;
   }
 }
 
 /* Remove margins for header text */
-header h1,
-header p {
+body > header h1,
+body > header p {
   margin: 0;
 }
 
 /* Fix header line height when title wraps */
-header h1 {
+body > header h1 {
   line-height: 1.1;
 }
 
@@ -131,7 +131,7 @@ nav a.current:hover {
   text-decoration: none;
 }
 
-footer {
+body > footer {
   margin-top: 4rem;
   padding: 2rem 1rem 1.5rem 1rem;
   color: var(--text-light);
