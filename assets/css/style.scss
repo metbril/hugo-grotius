@@ -1,3 +1,5 @@
+/* CLASSLES CSS */
+
 :root {
 
   /* Custom light theme */
@@ -30,6 +32,34 @@
   }
 }
 
+h1 a:any-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+article {
+	margin-top: 3em;
+}
+article {
+	h2 {
+		a {
+			color: var(--text) !important;
+			text-decoration: none;
+			&:link {
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+
+		}
+	}
+}
+article header,
+article footer {
+	font-size: .9rem;
+}
+
 /* Internal pagination classes */
 .pagination {
 	list-style-type: none;
@@ -39,10 +69,9 @@
 	overflow: hidden;
 	.page-item {
 		float: left;
-		padding: .5em 1em;
-		margin: 0 15px;
+		padding: 0;
+		margin: 0 ;
 		text-align: center;
-		background-color: white;
 		text-decoration: none;
 		.page-link {
 			text-decoration: none;
@@ -59,22 +88,6 @@
 	}
 	.pageitem.active {
 
-	}
-}
-
-article {
-	h2 {
-		a {
-			color: var(--text) !important;
-			text-decoration: none;
-			&:link {
-				text-decoration: none;
-			}
-			&:hover {
-				text-decoration: underline;
-			}
-
-		}
 	}
 }
 
