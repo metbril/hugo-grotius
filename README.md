@@ -80,6 +80,18 @@ The theme has official [i18n](https://gohugo.io/functions/i18n/) support.
 
 To [customize dates](https://gohugo.io/content-management/multilingual/#customize-dates), a per language translation file is available in the `data` folder.
 
+## Front matter
+
+The theme support some specific keys in post front matter.
+
+Key | Description
+--- | ---
+`hidden:` | `true` or `false`. When `true`, hides the post from any range/list. This is useful to create pages that should be available by their permalink, but are not actively shown. If omitted, it will default to `false`.
+`indieweb:` | Used for displaying IndieWeb post types. Supports multiple sub keys: `reply`, `like` and `bookmark`
+`reply:` | Subkey for `indieweb`. Indicates an "in repy to". Has subkeys `link` and `title`.
+`like:` | Subkey for `indieweb`. Indicates a "like of". Has subkeys `link` and `title`.
+`bookmark:` | Subkey for `indieweb`. Indicates a "bookmark of". Has subkeys `link` and `title`.
+
 ## Credits
 
 - [Normalize](https://necolas.github.io/normalize.css/) version 8.0.1
