@@ -4,7 +4,9 @@
         <h1 class="p-name">{{ .Title }}</h1><link class="u-url" href="{{ .Permalink | absURL }}">
         {{ .Content }}
     </div>
-    {{ range .Paginator.Pages }}
+    {{ $pages := where .Pages "Params.hidden" "ne" true }}
+    {{ $paginator := .Paginate $pages }}
+    {{ range $paginator.Pages }}
         {{ .Render "summary" }}
     {{ end }}
     <nav class="pagination">
