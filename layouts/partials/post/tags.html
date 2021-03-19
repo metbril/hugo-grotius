@@ -1,0 +1,8 @@
+{{ if .Params.tags }}
+<p>
+    <i class="fa fa-tag"></i>
+    {{ range .Params.tags | sort }}
+    #<a class="p-category" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" >{{- . -}}</a>
+    {{ end }}
+</p>
+{{ end }}
