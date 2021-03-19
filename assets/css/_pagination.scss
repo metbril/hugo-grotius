@@ -1,0 +1,37 @@
+/* Internal pagination classes */
+
+.pagination {
+	list-style-type: none;
+	margin: .5em 0;
+	padding: 0;
+	overflow: visible;
+	overflow: hidden;
+
+	.page-item {
+		float: left;
+		padding: 0;
+		margin: 0 ;
+		text-align: center;
+		text-decoration: none;
+
+		.page-link {
+			text-decoration: none;
+
+			&:link {
+				text-decoration: none;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.pageitem.disabled {
+    // unstyled
+	}
+	
+  .pageitem.active {
+    // unstyled
+	}
+}
