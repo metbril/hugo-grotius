@@ -22,12 +22,6 @@ other = "About"
 [indiewebring]
 other = "An IndieWeb Webring"
 
-[meta_reply_to]
-other = "In reply to"
-
-[meta_like_of]
-other = "Like of"
-
 [published_on]
 other = "Published on"
 

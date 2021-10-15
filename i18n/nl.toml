@@ -22,18 +22,6 @@ other = "Over"
 [indiewebring]
 other = "Een IndieWeb Webring"
 
-[meta_bookmark_of]
-other = "Bladwijzer van"
-
-[meta_reply_to]
-other = "In antwoord op"
-
-[meta_like_of]
-other = "Leuk gevonden van"
-
-[meta_syndicate_to]
-other = "Ook bij"
-
 [published_on]
 other = "Gepubliceerd op"
 
