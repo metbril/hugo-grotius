@@ -71,7 +71,7 @@ body {
   overflow-wrap: break-word;
 }
 
-/* EDIT: Only set body header, and NOT every header */
+/* EDIT: Only set body header/footer, and NOT every header/footer */
 
 /* Make the header bg full width, but the content inline with body */
 body > header {
@@ -90,8 +90,8 @@ body > header {
 
 
 /* Remove margins for header text */
-header h1,
-header p {
+body > header h1,
+body > header p {
   margin: 0;
 }
 
@@ -127,7 +127,9 @@ nav a.current:hover {
   text-decoration: none;
 }
 
-footer {
+/* EDIT: Only set body header/footer, and NOT every header/footer */
+
+body> footer {
   margin-top: 4rem;
   padding: 2rem 1rem 1.5rem 1rem;
   color: var(--text-light);
