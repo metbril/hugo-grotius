@@ -7,7 +7,7 @@ copyright = "GPL-3.0-or-later"
 theme = "grotius"
 themesDir = "../.."
 
-paginate = 3
+paginate = 10
 pluralizeListTitles = true
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
