@@ -28,7 +28,11 @@ other = "In reply to"
 [meta_like_of]
 other = "Like of"
 
-# https://gohugo.io/functions/format/
-# https://golang.org/pkg/time/#ANSIC
-[publishdate]
-other = "{{ .PublishDate.Format \"Monday, 2 January 2006 15:04:05 MST\" }}"
+[published_on]
+other = "Published on"
+
+[published_in]
+other = "in"
+
+[updated_on]
+other = "Updated on"

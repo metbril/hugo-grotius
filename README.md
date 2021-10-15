@@ -78,7 +78,7 @@ social:
 
 The theme has official [i18n](https://gohugo.io/functions/i18n/) support.
 
-To [customize dates](https://gohugo.io/content-management/multilingual/#customize-dates), a per language translation file is available in the `data` folder.
+To [customize dates](https://gohugo.io/content-management/multilingual/#customize-dates), the theme uses the `dateFormat` function, which outputs localized month names.
 
 ## Front matter
 

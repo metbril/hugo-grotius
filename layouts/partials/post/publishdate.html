@@ -1,7 +1,16 @@
+{{ if not .Date.IsZero }}
 <p>
-  <a class="url u-url" href="{{ .Permalink }}" title="" rel="bookmark">
-      <time class="post-date updated published dt-updated dt-published" datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" itemprop="dateModified datePublished">
-          {{ .PublishDate.Format "2006-01-02 15:04 MST" }}
-      </time>
-  </a>
+  {{ i18n "published_on" }}
+  <a class="url u-url" href="{{ .Permalink | absURL }}" title="" rel="bookmark"><time class="post-date published dt-published" datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" itemprop="datePublished" title="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ dateFormat (.Site.Params.dateformat | default "January 02, 2006") .Date -}}</time></a>
+  {{ if ne .Date .Lastmod }}
+  ({{ i18n "updated_on" }})
+  <time class="updated dt-updated" datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00"  | safeHTML}}" itemprop="dateModified" title="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+    {{ dateFormat (.Site.Params.dateformat | default "January 02, 2006") .Lastmod }}
+  </time>
+  {{ end }}
+    {{ if not (eq .FirstSection.RelPermalink .RelPermalink) }}
+  {{ i18n "published_in" }}
+  <a href="{{ .FirstSection.RelPermalink }}">{{ .FirstSection.Title }}</a>
+  {{ end }}
 </p>
+{{ end }}

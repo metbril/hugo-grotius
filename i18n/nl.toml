@@ -34,9 +34,11 @@ other = "Leuk gevonden van"
 [meta_syndicate_to]
 other = "Ook bij"
 
-# https://gohugo.io/functions/format/
-# https://golang.org/pkg/time/#ANSIC
-# https://github.com/nikalon/nikalon-hugo-theme/tree/master#optional-translate--override-months
-[publishdate]
-other = "{{ index $.Site.Data.i18n.nl.weekdays (.PublishDate.Format \"Monday\") }} {{ .PublishDate.Day }} {{ index $.Site.Data.i18n.nl.months (printf \"%d\" .PublishDate.Month) }} {{ .PublishDate.Year }} {{ .PublishDate.Format \"15:04:05 MST\" }}"
+[published_on]
+other = "Gepubliceerd op"
 
+[published_in]
+other = "in"
+
+[updated_on]
+other = "Bijgewerkt op"
