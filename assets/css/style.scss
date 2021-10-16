@@ -21,9 +21,13 @@
 
 /* ---------- CLASS-LESS CSS ---------- */
 
-h1 a:any-link {
-  color: var(--text);
-  text-decoration: none;
+h1 {
+	a {
+		&:any-link {
+			color: var(--text);
+			text-decoration: none;
+		}
+	}
 }
 
 article {
