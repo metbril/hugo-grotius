@@ -1,15 +1,15 @@
 {{ define "main" }}
 <main class="h-feed">
-    <div>
+    <header>
         <h1 class="p-name">{{ .Title }}</h1><link class="u-url" href="{{ .Permalink | absURL }}">
         {{ .Content }}
-    </div>
+    </header>
     {{ $pages := where .Pages "Params.hidden" "ne" true }}
     {{ $paginator := .Paginate $pages }}
     {{ range $paginator.Pages }}
         {{ .Render "summary" }}
     {{ end }}
-    <nav class="pagination">
+    <nav>
         {{ template "_internal/pagination.html" . }}
     </nav>
     {{ partialCached "authorcard.html" . }}
