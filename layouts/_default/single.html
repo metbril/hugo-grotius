@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ .Scratch.Set "scope" "single" }}
 <main>
     <article class="post h-entry" id="post-{{ .Permalink | md5 }}">
         {{ partial "post/header" . }}

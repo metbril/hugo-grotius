@@ -1,5 +1,7 @@
 <footer>
     {{ partial "post/publishdate" . }}
+    {{ if eq (.Scratch.Get "scope") "single"  }}
     {{ partial "post/tags" . }}
     {{ partialCached "authorcard.html" . }}
+    {{ end }}
 </footer>

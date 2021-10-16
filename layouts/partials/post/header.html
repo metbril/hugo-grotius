@@ -1,7 +1,13 @@
-<header class="post-header">
-    {{ if .Title }}
+<header>
+    {{ if eq (.Scratch.Get "scope") "single" }}
     <h1 class="p-name">
-        <a href='{{ .Permalink }}'>{{ .Title }}</a>
+    {{else}}
+    <h2 class="p-name"><a href='{{ .Permalink }}'>
+    {{end}}
+    {{ .Title }}
+    {{ if eq (.Scratch.Get "scope") "single" }}
     </h1>
-    {{ end }}
+    {{else}}
+    </a></h2>
+    {{end}}
 </header>
