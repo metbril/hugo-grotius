@@ -27,9 +27,6 @@ h1 a:any-link {
 }
 
 article {
-	margin-top: 3em;
-}
-article {
 	h2 {
 		a {
 			color: var(--text) !important;
@@ -43,10 +40,10 @@ article {
 
 		}
 	}
-}
-article header,
-article footer {
-	font-size: .9rem;
+	header,
+	footer {
+		font-size: .9rem;
+	}
 }
 
 /* ---------- Generic utility classes ---------- */
