@@ -21,6 +21,12 @@
 
 /* ---------- CLASS-LESS CSS ---------- */
 
+header > nav {
+	a {
+		background-color: var(--bg);
+	}
+}
+
 h1 {
 	a {
 		&:any-link {
