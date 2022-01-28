@@ -1,6 +1,36 @@
-# hugo-grotius
+# Hugo Grotius
 
-Hugo Grotius Theme
+A personal theme for [Hugo][gohugo] with [IndieWeb][indieweb] support.
+
+## Features
+
+- Indieweb
+  - Post types
+  - Author card / h-card
+- Internationlization en localization
+- Social icons
+
+## Installation
+
+TODO
+
+## Configuration
+
+### Site configuration
+
+TODO
+
+### Front matter
+
+The theme supports some specific keys in content front matter.
+
+Key | Description
+--- | ---
+`hidden:` | `true` or `false`. When `true`, hides the post from any range/list. This is useful to create pages that should be available by their permalink, but are not actively shown. If omitted, it will default to `false`.
+`indieweb:` | Used for displaying IndieWeb post types. Supports multiple sub keys: `reply`, `like` and `bookmark`
+`reply:` | Subkey for `indieweb`. Indicates an "in repy to". Has subkeys `link` and `title`.
+`like:` | Subkey for `indieweb`. Indicates a "like of". Has subkeys `link` and `title`.
+`bookmark:` | Subkey for `indieweb`. Indicates a "bookmark of". Has subkeys `link` and `title`.
 
 ## IndieWeb Posts
 
@@ -86,24 +116,14 @@ The theme has official [i18n](https://gohugo.io/functions/i18n/) support.
 
 To [customize dates](https://gohugo.io/content-management/multilingual/#customize-dates), the theme uses the `dateFormat` function, which outputs localized month names.
 
-## Front matter
-
-The theme support some specific keys in post front matter.
-
-Key | Description
---- | ---
-`hidden:` | `true` or `false`. When `true`, hides the post from any range/list. This is useful to create pages that should be available by their permalink, but are not actively shown. If omitted, it will default to `false`.
-`indieweb:` | Used for displaying IndieWeb post types. Supports multiple sub keys: `reply`, `like` and `bookmark`
-`reply:` | Subkey for `indieweb`. Indicates an "in repy to". Has subkeys `link` and `title`.
-`like:` | Subkey for `indieweb`. Indicates a "like of". Has subkeys `link` and `title`.
-`bookmark:` | Subkey for `indieweb`. Indicates a "bookmark of". Has subkeys `link` and `title`.
-
 ## Credits
 
 - [Normalize](https://necolas.github.io/normalize.css/) version 8.0.1
 - [ForkAwesome](https://forkaweso.me/) version 1.2.0
 - Wikimedia [picture of Hugo Grotius](https://commons.wikimedia.org/wiki/File:Michiel_Jansz_van_Mierevelt_-_Hugo_Grotius.jpg)
 
+[gohugo]: https://gohugo.io/
+[indieweb]: https://indieweb.org/
 [hugo-sections]: https://gohugo.io/content-management/sections/
 [hugo-content-type]: https://gohugo.io/content-management/types/
 [iw-note]: https://indieweb.org/note
