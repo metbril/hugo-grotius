@@ -56,6 +56,15 @@ article {
 	}
 }
 
+nav a,
+a button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  transition: none;
+}
+
 /* ---------- Generic utility classes ---------- */
 .left {
 	float: left;
