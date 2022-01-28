@@ -1,0 +1,7 @@
+{{/* NOTE: RSS feeds */}}
+{{ if .OutputFormats.Get "RSS" }}
+{{ with .OutputFormats.Get "RSS" }}
+<link href="{{ .RelPermalink | absURL }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+<link href="{{ .RelPermalink | absURL }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
+{{ end }}
