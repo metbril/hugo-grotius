@@ -1,20 +1,25 @@
 # hugo-grotius
+
 Hugo Grotius Theme
 
 ## IndieWeb Posts
 
 ### Sections
 
-The theme expects [IndieWeb posts](https://indieweb.org/posts) as separate sections. The advantage is, that the post type is determined by the section the page is in. You don't need to explicitly set the type. Post discovery is not required. Another advantage is, that Hugo supports post type views out of the box. You can simply open a section/view and list all pages in it.
+The theme expects [IndieWeb posts](https://indieweb.org/posts) as separate root [sections][hugo-sections].
 
-So your site will have sections like 'note', 'article', 'like' etc. These sections become Hugo page types. Layout templates in the theme are based on those layouts.
+The advantage of this is, that the IndieWeb post type by default is determined by the root section the page is in. You don't need to explicitly set the Hugo [content type][hugo-content-type]. Post discovery is not required.
+
+Another advantage is, that Hugo supports post type views out of the box. You can simply open a section/view and list all pages in it.
+
+So your site will have sections like 'note', 'article', 'like' etc. These sections become Hugo content types. Layout templates in the theme are based on those content types.
 
 These post types are currently supported:
 
-- note
-- article
-- like
-- bookmark
+- [note][iw-note]
+- [article][iw-article]
+- [like][iw-like]
+- [bookmark][iw-bookmark]
 
 Any unsupported type will fallback to the default layouts.
 
@@ -24,7 +29,8 @@ If you like to localize your post types, for example use 'bladwijzer' (Dutch) in
 
 The frontmatter in the index file should force the type and cascade it to all child pages:
 
-`/content/bladwijzer/_index.md`
+Example file `/content/bladwijzer/_index.md`:
+
 ```yaml
 type: bookmark
 cascade:
@@ -33,7 +39,7 @@ cascade:
 
 ## Hugo Grotius???
 
-[Hugo Grotius](https://en.wikipedia.org/wiki/Hugo_Grotius) (Hugo de Groot) is a Dutch historical figure. 
+[Hugo Grotius](https://en.wikipedia.org/wiki/Hugo_Grotius) (Hugo de Groot) is a Dutch historical figure.
 
 ## Social icons
 
@@ -43,7 +49,7 @@ To add a spacer between 2 icons, just create an item without a url. Just an id w
 You can use any available ForkAwesome icon.
 See the configuration file in the example site.
 
-Example file: `data/social.yaml`
+Example file `data/social.yaml`:
 
 ```yaml
 social:
@@ -97,3 +103,10 @@ Key | Description
 - [Normalize](https://necolas.github.io/normalize.css/) version 8.0.1
 - [ForkAwesome](https://forkaweso.me/) version 1.2.0
 - Wikimedia [picture of Hugo Grotius](https://commons.wikimedia.org/wiki/File:Michiel_Jansz_van_Mierevelt_-_Hugo_Grotius.jpg)
+
+[hugo-sections]: https://gohugo.io/content-management/sections/
+[hugo-content-type]: https://gohugo.io/content-management/types/
+[iw-note]: https://indieweb.org/note
+[iw-article]: https://indieweb.org/article
+[iw-like]: https://indieweb.org/like
+[iw-bookmark]: https://indieweb.org/nbookmark
