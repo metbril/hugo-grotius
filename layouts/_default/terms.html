@@ -1,0 +1,25 @@
+{{ define "main" }}
+<main>
+  <header>
+    <h1>
+      {{- i18n (lower .Title) | default .Title | title -}}
+    </h1>
+    {{ .Content }}
+  </header>
+  <ul>
+    {{ $type := .Type }}
+    {{ range $key, $value := .Data.Terms.ByCount }}
+      {{ $name := .Name }}
+      {{ $count := .Count }}
+      {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+        <li>
+          <span class="taxonomy-element">
+            <a href="{{ .Permalink }}">{{ .Name| lower }}</a>
+            ({{ $count }})
+          </span>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</main>
+{{ end }}

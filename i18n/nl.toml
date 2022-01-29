@@ -30,3 +30,13 @@ other = "in"
 
 [updated_on]
 other = "Bijgewerkt op"
+
+# taxonomies
+
+[tags]
+one = "label"
+other = "labelsxxx"
+
+[categories]
+one = "categorie"
+other = "categorieën"

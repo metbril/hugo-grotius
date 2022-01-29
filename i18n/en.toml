@@ -30,3 +30,13 @@ other = "in"
 
 [updated_on]
 other = "Updated on"
+
+# taxonomies
+
+[tags]
+one = "tag"
+other = "tags"
+
+[categories]
+one = "category"
+other = "categories"
