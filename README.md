@@ -3,6 +3,24 @@
 A personal theme for [Hugo][gohugo] with [IndieWeb][indieweb] support.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<details>
+<summary>Table of Contents</summary>
+
+- [Features](#features)
+- [Installation](#installation)
+- [Configuration](#configuration)
+  - [Site configuration](#site-configuration)
+  - [Front matter](#front-matter)
+- [IndieWeb Posts](#indieweb-posts)
+  - [Sections](#sections)
+  - [Localization](#localization)
+- [Hugo Grotius???](#hugo-grotius)
+- [Social icons](#social-icons)
+- [Localization / Internationalization](#localization--internationalization)
+- [Credits](#credits)
+
+</details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Features
