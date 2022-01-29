@@ -2,6 +2,9 @@
 
 A personal theme for [Hugo][gohugo] with [IndieWeb][indieweb] support.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Features
 
 - Indieweb

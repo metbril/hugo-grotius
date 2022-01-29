@@ -1,0 +1,13 @@
+---
+# yamllint disable-line rule:truthy
+on: push
+name: TOC Generator
+jobs:
+  generateTOC:
+    name: Generate TOC
+    runs-on: ubuntu-latest
+    steps:
+      - uses: technote-space/toc-generator@v4.1.6
+        with:
+          TOC_TITLE: '**Table of Contents**'
+          FOLDING: true
