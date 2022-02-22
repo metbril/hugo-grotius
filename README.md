@@ -12,12 +12,10 @@ A personal theme for [Hugo][gohugo].
 - [Configuration](#configuration)
   - [Site configuration](#site-configuration)
   - [Front matter](#front-matter)
-- [IndieWeb Posts](#indieweb-posts)
-  - [Sections](#sections)
   - [Localization](#localization)
-- [Hugo Grotius???](#hugo-grotius)
 - [Social icons](#social-icons)
 - [Localization / Internationalization](#localization--internationalization)
+- [Hugo Grotius???](#hugo-grotius)
 - [Credits](#credits)
 
 </details>
