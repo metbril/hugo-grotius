@@ -14,7 +14,7 @@
       {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
         <li>
           <span class="taxonomy-element">
-            <a href="{{ .Permalink }}">{{ .Name| lower }}</a>
+            <a href="{{ .Permalink }}">{{ .Name | humanize }}</a>
             ({{ $count }})
           </span>
         </li>
