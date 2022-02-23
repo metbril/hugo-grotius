@@ -24,17 +24,11 @@ SectionPagesMenu = "main"
   localStyles = true
 
   # inlinecss = false
-  # authorcard = false
 
-# grotius: h-card properties
 [author]
+  # "name" and "email" are used in internal RSS template
   name = "Hugo Grotius"
-  url = "https://en.wikipedia.org/wiki/Hugo_Grotius"
   email = "hugo.grotius@example.com"
-  photo = "/images/hugo.jpg"
-  locality = "Delft"
-  countryName = "Netherlands"
-  note = "Jurist. Writer."
 
 [[params.indieweb.endpoint]]
    rel = "authorization_endpoint"

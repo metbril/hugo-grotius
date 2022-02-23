@@ -6,7 +6,6 @@
         {{ .Content }}
     {{ end }}
     </div>
-    {{ partialCached "authorcard.html" . }}
     {{ $pages := where ( where site.RegularPages "Type" "in" site.Params.mainSections ) "Params.hidden" "ne" true }}
     {{ $paginator := .Paginate $pages }}
     {{ range $paginator.Pages }}
