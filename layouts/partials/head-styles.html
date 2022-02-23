@@ -1,6 +1,0 @@
-{{ $fa := resources.Get "css/fork-awesome.min.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $fa.RelPermalink }}" integrity="{{ $fa.Data.Integrity }}">
-{{ $simple := resources.Get "css/simple.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $simple.RelPermalink }}" integrity="{{ $simple.Data.Integrity }}">
-{{ $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">

@@ -1,4 +1,0 @@
-{{- $default := "fa fa-file-o fa-fw" -}}
-{{- $m := index (where .Site.Params.PostType "name" .Type) 0 -}}
-{{ $icon := $m.icon }}
-<i class="{{ $icon | default $default }}"></i>

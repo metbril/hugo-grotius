@@ -1,11 +1,14 @@
-{{ .Scratch.Set "scope" "summary" }}
 <article class="post h-entry" id="post-{{ .Permalink | md5 }}">
-    {{ partial "post/header" . }}
+    <header>
+        <h2 class="p-name"><a href='{{ .Permalink }}'>{{ .Title }}</a></h2>
+    </header>
     <section class="p-summary">
-    <p>
-        {{ .Summary }}
-        {{ if .Truncated }}<a href="{{ .RelPermalink }}">{{ i18n "readmore" }}</a>{{ end }}
-    </p>
+        <p>
+            {{ .Summary }}
+            {{ if .Truncated }}<a href="{{ .RelPermalink }}">{{ i18n "readmore" }}</a>{{ end }}
+        </p>
     </section>
-    {{ partial "post/footer" . }}
+    <footer>
+        {{ partial "publishdate" . }}
+    </footer>
 </article>

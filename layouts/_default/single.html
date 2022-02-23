@@ -1,12 +1,23 @@
 {{ define "main" }}
-{{ .Scratch.Set "scope" "single" }}
 <main>
     <article class="post h-entry" id="post-{{ .Permalink | md5 }}">
-        {{ partial "post/header" . }}
+        <header>
+            <h1 class="p-name">{{ .Title }}</h1>
+        </header>
         <section class="post-content e-content">
             {{ .Content }}
         </section>
-        {{ partial "post/footer" . }}
+        <footer>
+            {{ partial "publishdate" . }}
+            {{ if .Params.tags }}
+            <p>
+                <i class="fa fa-tag"></i>
+                {{ range .Params.tags | sort }}
+                #<a class="p-category" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" >{{- . -}}</a>
+                {{ end }}
+            </p>
+            {{ end }}
+        </footer>
     </article>
 </main>
 {{ end }}

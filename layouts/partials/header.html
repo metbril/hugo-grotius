@@ -1,5 +1,8 @@
 <header id="main">
-    <h1><a href={{ "/" | absURL }}>{{ .Site.Title }}</a></h1>
+    <h1>
+        <img width="20" height="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAvVBMVEX///8AAAD9/f0PDw8LCwsFBQX29vYdHR0WFhb6+vr39/fQ0NAaGhr4+Pjn5+fHx8fh4eGioqKWlpYmJiYgICASEhLw8PDk5OTZ2dm3t7d+fn55eXlWVlZNTU1ISEhDQ0MiIiLr6+vb29vLy8vCwsK7u7uqqqqZmZmGhoZqampjY2NJSUk5OTksLCzV1dWQkJB0dHRubm5aWlpQUFDc3Ny+vr6ysrKxsbGcnJybm5uUlJSRkZGMjIyDg4MxMTHPl8tGAAABaklEQVQ4y3WS13arMBBF2aL35t5jx91Ovb39/2ddJawIEPF5YRZn68wwwmhJxHFg3JYw4nz6x5HPm/LXWeLfBoRedX3xLkcR2ulNWNXD3WdzBGI0HQSjJEgyI/0ls/SA0eD4c7/Am8GpmA06De62D0+AC3YfGGdCA0KKE6WJhYlXsp5sDdECUvIzNvBPMhHjw1oHyitI75I84UUcwkBrcc/yYuNxMsaUffYjQ7SB7fIyXdLnvPkOlC9ftQ6D63F2xeZNruQWhd8OGBKZld/z3pmj0NbgraSvFDHRWvgvWNRyedSHfKRHrR4/dCDEpdaKnSE6i1g1gYcOELxifvgeM18BisjrKSI28oUOFAowmfufAAfcGgh0QBLPeApYON0RnCWWAs5xE6jqrP4I22LY/GvF23lnh9vY9Lcwloi6ytBIiz0RStaC9K6KlpyTf0knTNu3OZ/8TZIqIf49z8c2Vp9GAq/PhPeZXMd//QQWJkKeDDkAAAAASUVORK5CYII=" />
+        <a href={{ "/" | absURL }}>{{ .Site.Title }}</a>
+    </h1>
     {{ with .Site.Params.Description }}<p><cite>{{ . | safeHTML }}</cite></p>{{ end }}
     <nav>
         {{ range .Site.Menus.main }}
