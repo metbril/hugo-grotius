@@ -5,7 +5,9 @@
     </head>
     <body>
         {{ partialCached "header.html" . }}
-        {{ block "main" . }}{{ end }}
+        <main class="main">
+            {{ block "main" . }}{{ end }}
+        </main>
         {{ partialCached "footer.html" . }}
     </body>
 </html>
