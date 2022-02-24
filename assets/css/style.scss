@@ -2,38 +2,69 @@
 @import 'variables';
 @import 'pagination';
 
-@mixin clearfix {
-	display: block;
-
-	&::after {
-		display: block;
-		height: 0;
-		padding: 0;
-		margin: 0;
-		clear: both;
-		line-height: 0;
-		visibility: hidden;
-		content: "";
-	}
-}
-
 html {
+	background-color: var(--bg);
+	color: var(--text);
 	font-family: var(--sans-font);
 	font-size: 1.4rem;
-	background-color: var(--bg);
 	line-height: 1.5rem;
 }
-body > header {
+header.main {
 	background-color: var(--accent-bg);
-}
-body > header h1 {
-	margin: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	font-size: .8rem;
+	border-bottom: 2px solid var(--accent);
+	padding: 20px 20px;
+	margin-bottom: 120px;
+	h1 {
+		margin: 0;
+		font-size: .8rem;
+	}
+	nav {
+		ul {
+			justify-content:flex-end;
+			list-style: none;
+			margin: 0;
+			li {
+				display: inline;
+				padding: 0 4px;
+				a {
+					background-color: var(--accent-bg);
+					color: var(--accent);
+				}
+			}
+		}
+	}
 }
 main.main {
 	max-width: 800px;
 	margin: 0 auto;
 }
+
 /* ---------- CLASS-LESS CSS ---------- */
+
+a {
+	background-color: var(--accent-bg);
+	color: var(--accent);
+}
+nav {
+	ul {
+		list-style: none;
+		li {
+			display: inline;
+			padding: 0 10px;
+		}
+	}
+}
+nav.taxonomies {
+	margin: 60px 0;
+}
+
+
 
 header > nav {
 	a {

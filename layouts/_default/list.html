@@ -3,6 +3,7 @@
   <header>
       <h1 class="p-name">{{ .Title }}</h1><link class="u-url" href="{{ .Permalink | absURL }}">
       {{ .Content }}
+      {{ partial "categories.html" . }}
   </header>
   {{ $pages := where .Pages "Params.hidden" "ne" true }}
   {{ $paginator := .Paginate $pages }}
