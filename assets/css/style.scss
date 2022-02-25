@@ -3,41 +3,36 @@
 @import 'pagination';
 
 html {
-	background-color: var(--bg);
-	color: var(--text);
 	font-family: var(--sans-font);
 	font-size: 1.4rem;
-	line-height: 1.5rem;
+	line-height: 1.5em;
+	background-color: var(--bg);
+	color: var(--text);
 }
 header.main {
-	background-color: var(--accent-bg);
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row nowrap;
 	justify-content: space-between;
-	align-items: stretch;
+	background-color: var(--accent-bg);
 	font-size: .8rem;
-	border-bottom: 2px solid var(--accent);
 	padding: 20px 20px;
+	border-bottom: 2px solid var(--accent);
 	margin-bottom: 120px;
+	a {
+		padding: 4px 8px;
+		border-radius: 4px;
+		border: 1px solid var(--accent-bg);
+		&:hover {
+			background-color: var(--bg);
+			border-color: var(--accent)
+		}
+	}
 	h1 {
 		margin: 0;
 		font-size: .8rem;
 	}
 	nav {
-		ul {
-			justify-content:flex-end;
-			list-style: none;
-			margin: 0;
-			li {
-				display: inline;
-				padding: 0 4px;
-				a {
-					background-color: var(--accent-bg);
-					color: var(--accent);
-				}
-			}
-		}
+		text-align: right;
 	}
 }
 main.main {
@@ -48,28 +43,25 @@ main.main {
 /* ---------- CLASS-LESS CSS ---------- */
 
 a {
-	background-color: var(--accent-bg);
 	color: var(--accent);
 }
 nav {
 	ul {
 		list-style: none;
+		margin: 0;
 		li {
 			display: inline;
-			padding: 0 10px;
+			padding: 0 4px;
 		}
 	}
 }
-nav.taxonomies {
+ul.categories {
 	margin: 60px 0;
 }
 
 
 
 header > nav {
-	a {
-		background-color: var(--bg);
-	}
 }
 
 h1 {
