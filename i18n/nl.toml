@@ -31,12 +31,13 @@ other = "in"
 [updated_on]
 other = "Bijgewerkt op"
 
-# taxonomies
+# i18n taxonomy names
+# this accompanies the use of localized taxonomy names in the site config.
 
 [tags]
-one = "label"
-other = "labelsxxx"
+one = "tag"
+other = "tags"
 
 [categories]
-one = "categorie"
-other = "categorieën"
+one = "category"
+other = "categories"

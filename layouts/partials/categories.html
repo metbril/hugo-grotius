@@ -1,9 +1,8 @@
-<nav class="taxonomies">
-  {{ if .Site.Taxonomies.categories }}
-  <ul>
-      {{ range .Site.Taxonomies.categories | sort }}
-      <li><a href="">{{ .Page.Title }}</a></li>
-      {{ end }}
-  </ul>
-  {{ end }}
+<nav>
+  <ul class="categories">
+    {{ $taxo := .Site.GetPage (i18n "categories") }}
+    {{ range $taxo.Data.Terms.Alphabetical }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+    {{ end }}
+    </ul>  
 </nav>
