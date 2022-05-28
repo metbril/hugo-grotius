@@ -19,14 +19,6 @@ description: Here is a demo of all shortcodes available in Hugo.
 
 {{< youtube w7Ft2ymGmfc >}}
 
-## Tweet
-
-{{< tweet 877500564405444608 >}}
-
 ## Vimeo
 
 {{< vimeo id="146022717" >}}
-
-## Instagram
-
-{{< instagram BWNjjyYFxVx >}}
