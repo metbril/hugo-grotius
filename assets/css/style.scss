@@ -1,114 +1,37 @@
-@import 'normalize';
 @import 'variables';
 @import 'pagination';
 
 html {
 	font-family: var(--sans-font);
-	font-size: 1.4rem;
-	line-height: 1.5;
-	background-color: var(--bg);
-	color: var(--text);
 }
-header.main {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	background-color: var(--accent-bg);
-	font-size: .8rem;
-	padding: 20px 20px;
-	border-bottom: 2px solid var(--accent);
-	margin-bottom: 120px;
-	a {
-		padding: 4px 8px;
-		border-radius: 4px;
-		border: 1px solid var(--accent-bg);
-		&:hover {
-			background-color: var(--bg);
-			border-color: var(--accent)
-		}
-	}
-	h1 {
-		margin: 0;
-		font-size: .8rem;
-	}
-	nav {
-		text-align: right;
-	}
+body {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.5;
 }
-main.main {
-	max-width: 800px;
-	margin: 0 auto;
+code, pre {
+	font-family: var(--mono-font);
 }
-
-/* ---------- CLASS-LESS CSS ---------- */
-
-a {
-	color: var(--accent);
+body > header h1 {
+  font-weight: 900;
 }
-nav {
-	ul {
-		list-style: none;
-		margin: 0;
-		li {
-			display: inline;
-			padding: 0 4px;
-		}
-	}
+body > header h1 a {
+  text-decoration: none;
+  color: inherit;
 }
-ul.categories {
-	margin: 60px 0;
+body > header > nav > ul {
+  list-style: none;
+  display: block;
+  padding: 0;
 }
-
-
-
-header > nav {
+body > header > nav > ul > li {
+  display: inline-block;
 }
-
-h1 {
-	a {
-		&:any-link {
-			color: var(--text);
-			text-decoration: none;
-		}
-	}
+body > header {
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
 }
-
-article {
-	h2 {
-		a {
-			color: var(--text) !important;
-			text-decoration: none;
-			&:link {
-				text-decoration: none;
-			}
-			&:hover {
-				text-decoration: underline;
-			}
-
-		}
-	}
-	header,
-	footer {
-		font-size: .9rem;
-	}
-}
-
-nav a,
-a button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  transition: none;
-}
-
-/* ---------- Generic utility classes ---------- */
-.left {
-	float: left;
-}
-.right {
-	float: right;
-}
-.flex {
-	display: flex;
+body > footer {
+  border-top-width: 1px;
+  border-top-style: dashed;
 }

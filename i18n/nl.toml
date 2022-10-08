@@ -34,10 +34,8 @@ other = "Bijgewerkt op"
 # i18n taxonomy names
 # this accompanies the use of localized taxonomy names in the site config.
 
-[tags]
-one = "tag"
-other = "tags"
+[tag]
+other = "label"
 
-[categories]
-one = "category"
-other = "categories"
+[category]
+other = "categorie"

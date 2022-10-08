@@ -12,7 +12,7 @@
     {{ .Render "summary" }}
     {{ end }}
     <nav class="pagination">
-        {{- partial "pagination" . -}}
+        {{ template "_internal/pagination.html" . }}
     </nav>
 </main>
 {{ end }}

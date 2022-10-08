@@ -2,7 +2,7 @@
 
 .pagination {
 	list-style-type: none;
-	margin: .5em 0;
+	margin: .5rem 0;
 	padding: 0;
 	overflow: visible;
 	overflow: hidden;
@@ -11,10 +11,15 @@
 	.page-item {
 		// float: left;
 		display: inline-block;
-		padding: 0;
-		margin: 0 ;
+		padding: .5em;
+		margin: .5em ;
 		text-align: center;
 		text-decoration: none;
+		background-color: var(--accent-bg);
+		border-color: var(--border);
+		border-width: 1px;
+		border-radius: 5px;
+		border-style: solid;
 
 		.page-link {
 			text-decoration: none;
@@ -24,7 +29,7 @@
 			}
 
 			&:hover {
-				text-decoration: none;
+				text-decoration: underline;
 			}
 		}
 		.disabled {

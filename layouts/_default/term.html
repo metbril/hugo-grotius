@@ -3,7 +3,7 @@
     <header>
         <h1 class="p-name">
             {{- if eq .Kind "term" -}}
-            {{- i18n .Data.Singular | title -}}
+            {{- (i18n .Data.Singular | default .Data.Singular) | title -}}
             {{- print ": " -}}
             {{- end -}}    
             {{ .Title }}
